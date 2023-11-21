@@ -1,7 +1,12 @@
 // src/components/Dashboard.js
 import React, { useState } from 'react';
+import axios from 'axios'
+// import { useToaster } from 'react-hot-toast';
 
 const Dashboard = () => {
+
+    // const toast = useToaster()
+
     const [formData, setFormData] = useState({
         username: '',
         password: '',
@@ -17,7 +22,21 @@ const Dashboard = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         console.log(formData.username)
-        // console.log(formData.password)
+        console.log(formData.password)
+
+        try {
+
+            const response = await axios.post(`http://localhost:4000/form/register`, formData)
+            console.log("Registration Successful !", response.data)
+            // toast.success('User registered successfully');
+
+        }
+        catch (error) {
+            console.error("Registration Failure", error.response.data)
+            // toast.error('Registration failed. Please try again');
+
+        }
+
     };
 
     return (
