@@ -17,7 +17,7 @@ const Dashboard = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         console.log(formData.username)
-        console.log(formData.password)
+        // console.log(formData.password)
     };
 
     return (
