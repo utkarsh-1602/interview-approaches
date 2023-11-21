@@ -27,12 +27,15 @@ const Dashboard = () => {
         try {
 
             const response = await axios.post(`http://localhost:4000/form/register`, formData)
-            console.log("Registration Successful !", response.data)
+            console.log(response.data.msg)
             // toast.success('User registered successfully');
 
         }
         catch (error) {
-            console.error("Registration Failure", error.response.data)
+            console.log(error?.response?.data)
+            if (error?.response?.data) {
+                console.log(error.response.data.msg)
+            }
             // toast.error('Registration failed. Please try again');
 
         }
