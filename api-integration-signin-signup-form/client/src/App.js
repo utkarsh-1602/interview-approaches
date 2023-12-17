@@ -5,8 +5,6 @@ import Dashboard from './components/Dashboard';
 function App() {
   return (
     <div className="App">
-      Hello world
-      {/* <Toaster position="top-center" /> */}
       <Dashboard />
     </div>
   );
