@@ -25,8 +25,8 @@ router.get('/route2',(req,res)=>{
 
 ```
 
-Answer : 
+**Answer :** 
 - await only `blocks/suspends` execution of the current function, not the whole interpreter. In fact, at the point a function hits the first await inside the function, the function immediately returns a promise and other processing after that function (or other events that occur) are free to run.
 
-So, in the example, when it hits the `await sleep()`, that function execution is suspended until the await `resolves/rejects` and the containing `async` function immediately returns an unfulfilled promise. Since Express with `router.get()` is not doing anything with that returned promise, it just ignores it and returns control back to the event loop. Sometime later, your second request arrives at the server, an event gets put into the nodejs event queue and Express gets called with that event and it serves your second route handler.
+- So, in the example, when it hits the `await sleep()`, that function execution is suspended until the await `resolves/rejects` and the containing `async` function immediately returns an unfulfilled promise. Since Express with `router.get()` is not doing anything with that returned promise, it just ignores it and returns control back to the event loop. Sometime later, your second request arrives at the server, an event gets put into the nodejs event queue and Express gets called with that event and it serves your second route handler.
 
