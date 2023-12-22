@@ -1,3 +1,11 @@
+# What is async Function ?
+Asynchronous programming is a technique that enables your program to start a potentially long-running task and still be able to be responsive to other events while that task runs, rather than having to wait until that task has finished. Once that task has finished, your program is presented with the result.
+
+# What is await Function ?
+Await function is used to wait for the promise. It could be used within the async block only.
+It makes the code wait until the promise returns a result.
+
+
 # Where Async function is being executed? is it in execution stack or callback queue
 
 - all sync JavaScript code is executed in execution stack . all async JavaScript callback function is placed in callback queue . event loop will wait to put callback functions into execution stack from callback queue until when execution stack gets empty.( to get execution stack empty, all of the sync code should be completed its execution).
