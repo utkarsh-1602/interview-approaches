@@ -8,6 +8,9 @@ Let's say, for example, you have a feature that allows users to post updates and
 The async functions would handle the asynchronous operations, ensuring that each step waits for the previous one to complete before moving on.
 
 
+---
+
+
 # Using Callback Function 
 Imagine you are developing a chat application. In this application, users can send messages to each other in real-time. Here's how a callback function could be conceptually applied:
 
