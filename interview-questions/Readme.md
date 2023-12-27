@@ -1,4 +1,7 @@
 # Could you describe when you faced a challenge and how you overcame it?
+
+## Scenario 1 
+
 As a backend developer I was working on a rapidly growing e-commerce platform, I encountered a significant challenge related to scalability. Our application started experiencing performance issues as the user base and concurrent requests increased. Customers reported slow response times during peak hours, impacting their overall shopping experience.
 
 ### Problem Identification:
