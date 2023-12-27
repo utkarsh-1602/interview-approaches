@@ -9,7 +9,6 @@ It makes the code wait until the promise returns a result.
 # Where Async function is being executed? is it in execution stack or callback queue
 
 - all sync JavaScript code is executed in execution stack . all async JavaScript callback function is placed in callback queue . event loop will wait to put callback functions into execution stack from callback queue until when execution stack gets empty.( to get execution stack empty, all of the sync code should be completed its execution).
-- When an I/O operation completes, the callback gets put onto the queue ahead of any tasks that are still waiting for I/O and behind any others that have already completed and are just waiting to resume again. This is actually just a simplified view of scheduling, because there is probably some priority balancing going on as well.
 - When an async call is made, its entire stack is saved in the callback queue until the call completes. When this happens, the stack is moved back out of the queue and becomes the current execution stack. No code actually executes “in the queue”, it’s always executed in the context of the currently scheduled activation stack (also known as the “main thread”).
 
 > For Example: 
