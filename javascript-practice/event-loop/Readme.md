@@ -5,6 +5,39 @@
 
 - event loop creates an illusion that JavaScript is multi-threaded, but it is single threaded.
 
+- An Event Loop in JavaScript is said to be a constantly running process that keeps a tab on the call stack. Its main function is to check whether the call stack is empty or not. If the call stack turns out to be empty, the event loop proceeds to execute all the callbacks waiting in the task queue. Inside the task queue, the tasks are broadly classified into two categories, namely micro-tasks and macro-tasks.
+
+
+## Micro-tasks
+
+- **Microtasks** are tasks that are executed in the current event loop iteration, right after the synchronous part of the code and before the next macrotask.
+`Promises` (and their `then` and `catch` callbacks) and certain DOM events like `MutationObserver` callbacks are examples of microtasks.
+Microtasks have higher priority than macrotasks and are executed before macrotasks in the event loop.
+
+- **Microtasks**, are smaller tasks that update the application state and should be executed before the browser continues with other assignments such as re-rendering the UI. Microtasks include promise callbacks and DOM mutation changes. Microtasks enable us to execute certain actions before the UI is re-rendered, thereby avoiding unnecessary UI rendering that might show an inconsistent application state
+
+
+## Macro-tasks
+
+- **Macrotasks** are tasks that are scheduled to be executed in the next event loop iteration.
+- Examples of macrotasks include `setTimeout, setInterval, I/O operations, network events, Html parsing, changing Url, keyboard events, mouse events ` etc.
+- Macrotasks have lower priority than microtasks, and they are executed after microtasks in the event loop.
+
+
+## Here's a simple illustration of the event loop sequence:
+
+
+|---------------------------------------|
+|    Synchronous Execution              |
+|---------------------------------------|
+|    Microtask Queue (Promise, etc.)    |
+|---------------------------------------|
+|    Macrotask Queue (setTimeout, etc.) |
+|---------------------------------------|
+
+
+- When the execution stack is empty (after synchronous code execution), the event loop checks the microtask queue. If there are microtasks, they are executed one by one until the microtask queue is empty. After that, the event loop checks the macrotask queue and executes the next macrotask. This process continues in a loop.
+
 ## How do Event loops work?
 1. Call Stack: JavaScript uses a call stack to keep track of the currently executing function (where the program is in its execution).
 
@@ -17,6 +50,7 @@
 5. Callback Execution: When an asynchronous operation is complete, its callback is placed in the callback queue.
 
 6. Repeat: The event loop continues this process, ensuring that the call stack is always empty before taking the next function from the callback queue.
+
 
 ## memory allocation in JavaScript
 
