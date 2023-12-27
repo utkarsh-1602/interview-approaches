@@ -75,28 +75,14 @@ new Promise(function (resolve, reject) {
 
 // Solution 
 /*
+After the program code is executed, the program will be executed in order, so begin will be printed first. Then, the setTimeout will be placed in the macrotask queue.
 
-Initial Synchronous Execution:
+That is why new Promise will be executed first. It will print out promise 2, and then the setTimeout within the promise will be put into the macrotask queue.
 
-console.log("begins");: Prints "begins" to the console.
-Macrotasks (setTimeout):
+Now, the main thread is empty again, so the event loop will check the macrotask queue, execute the first setTimeout in the queue, then print setTimeout 1, and then put the Promise.resolve() within it to the microtasks queue.
 
-setTimeout(() => { console.log("setTimeout 1"); ... }, 0);: Schedules a macrotask to be executed in the next event loop iteration.
-Microtasks (Promise):
+Because the macrotask will only execute the first item each time, we turn to the microtask queue, then we will find that there is a Promise.resolve(), so promise 1 will be printed. Now, the microtasks queue is empty, so go back and look at the macrotasks queue.
 
-Promise.resolve().then(() => { console.log("promise 1"); });: Adds a microtask to the microtask queue.
-Promise Executor:
-
-new Promise(function (resolve, reject) { console.log("promise 2"); ... });: Executes the promise executor immediately, logging "promise 2."
-Nested Macrotask (setTimeout inside Promise):
-
-setTimeout(function () { console.log("setTimeout 2"); resolve("resolve 1"); }, 0);: Schedules a macrotask inside the promise executor to be executed in the next event loop iteration.
-Microtask (then):
-
-.then((res) => { console.log("dot then 1"); ... });: Adds a microtask to the microtask queue.
-Final Output Expectation:
-
-The order of execution will be "begins," "promise 2," "dot then 1," "setTimeout 1," "promise 1," "setTimeout 2," "resolve 1," and finally, the logged value of res from the second setTimeout callback.
-
+In the macrotasks queue, there is a setTimeout, so it prints setTimeout 2. Then since resolve is called here, it enters .then and prints out dot then 1. And setTimeout will be put in the macrotask queue, because the microtask queue is empty now, setTimeout in the macrotask queue will be put on the execution stack, and then print console.log(res). The value of resolve is resolve 1, so resolve 1 is printed at the end.
 
 */
