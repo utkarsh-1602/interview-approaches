@@ -1,6 +1,6 @@
 # Could you describe when you faced a challenge and how you overcame it?
 
----
+--------
 ## Scenario 1 
 
 
@@ -24,4 +24,4 @@ The challenge was to find a scalable solution that could enhance performance wit
     In collaboration with the database team, we conducted a thorough analysis of the existing queries and identified areas for optimization. Indexing strategies were revised, and complex queries were refactored to improve efficiency. This step significantly reduced the execution time of database queries and enhanced overall database performance.
 
 
----
+------
