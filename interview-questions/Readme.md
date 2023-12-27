@@ -1,6 +1,8 @@
 # Could you describe when you faced a challenge and how you overcame it?
 
+---
 ## Scenario 1 
+
 
 As a backend developer I was working on a rapidly growing e-commerce platform, I encountered a significant challenge related to scalability. Our application started experiencing performance issues as the user base and concurrent requests increased. Customers reported slow response times during peak hours, impacting their overall shopping experience.
 
@@ -22,3 +24,4 @@ The challenge was to find a scalable solution that could enhance performance wit
     In collaboration with the database team, we conducted a thorough analysis of the existing queries and identified areas for optimization. Indexing strategies were revised, and complex queries were refactored to improve efficiency. This step significantly reduced the execution time of database queries and enhanced overall database performance.
 
 
+---
