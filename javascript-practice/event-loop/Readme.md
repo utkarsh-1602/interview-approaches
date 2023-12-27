@@ -1,5 +1,9 @@
 ## What is Event loop ? 
-In JavaScript, the event loop is a fundamental mechanism that enables the asynchronous execution of code. It’s an essential part of the JavaScript runtime environment, allowing the language to handle non-blocking operations efficiently. The event loop is responsible for managing the execution of code, handling events, and maintaining the flow of control.
+- An event loop is something that pulls stuff out of the queue and places it onto the function execution stack whenever the function stack becomes empty.
+
+- In JavaScript, the event loop is a fundamental mechanism that enables the asynchronous execution of code. It’s an essential part of the JavaScript runtime environment, allowing the language to handle non-blocking operations efficiently. The event loop is responsible for managing the execution of code, handling events, and maintaining the flow of control.
+
+
 
 ## How do Event loops work?
 1. Call Stack: JavaScript uses a call stack to keep track of the currently executing function (where the program is in its execution).
@@ -13,3 +17,11 @@ In JavaScript, the event loop is a fundamental mechanism that enables the asynch
 5. Callback Execution: When an asynchronous operation is complete, its callback is placed in the callback queue.
 
 6. Repeat: The event loop continues this process, ensuring that the call stack is always empty before taking the next function from the callback queue.
+
+## memory allocation in JavaScript
+
+1. Heap Memory - Data stored randomly and memory allocated.
+
+2. Stack memory - Memory allocated in the form of stacks. Mainly used for functions.
+
+
