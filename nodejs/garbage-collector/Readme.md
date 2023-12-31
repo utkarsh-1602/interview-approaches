@@ -7,4 +7,14 @@
 Make sure your Node.js version supports garbage collection logging. You may need to use a version with the --expose-gc flag. 
 For example:
 ```bash
-node --expose-gc your-app.js
+node --expose-gc index.js
+```
+
+The `--trace_gc` flag is typically used for debugging and profiling purposes and may impact performance. It's not recommended to use it in a production environment.
+```bash
+node --trace_gc index.js
+```
+
+
+
+
