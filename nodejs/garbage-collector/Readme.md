@@ -7,5 +7,4 @@
 Make sure your Node.js version supports garbage collection logging. You may need to use a version with the --expose-gc flag. 
 For example:
 ```bash
-Copy code
 node --expose-gc your-app.js
