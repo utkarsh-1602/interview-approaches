@@ -15,6 +15,9 @@ The `--trace_gc` flag is typically used for debugging and profiling purposes and
 node --trace_gc index.js
 ```
 
-
+you can use both commands simultaneously as well to log the grabage collection process : 
+```bash
+node --expose-gc --trace_gc index.js
+```
 
 
