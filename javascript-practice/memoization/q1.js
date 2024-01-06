@@ -30,3 +30,6 @@ function fibonacci2(n, cache = {}) {
 //In this modified version, we introduce an additional parameter cache with a default value of an empty object {}. The cache object serves as a storage for previously computed Fibonacci values. We first check if the result for a given n exists in the cache. If it does, we return the cached result directly. Otherwise, we compute the Fibonacci value as usual, store it in the cache, and return it.
 
 // This approach improves the time complexity of the fibonacci function from exponential to linear, making it much more efficient
+
+console.log(fibonacci(5))
+console.log(fibonacci2(5))
