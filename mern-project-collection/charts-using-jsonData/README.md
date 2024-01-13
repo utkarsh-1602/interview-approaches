@@ -3,7 +3,7 @@
 - This project includes a Chart components for rendering Various Charts using the `react-chartjs-2` library.  
 - **Resources :** https://react-chartjs-2.js.org/
 
-### Note : This Project is Using sample data added Manually to visualize the chart
+### Note : This Project is Using JSON Data to visualize the chart
 
 ### Installation
 
