@@ -12,7 +12,7 @@ export default function Home() {
     </main>
       <h1 className="text-black font-bold text-2xl flex justify-center">Bar Chart</h1>
       <BarChart jsonData={jsonData}/>    
-      <h1 className="text-black font-bold text-2xl flex justify-center mt-6">Piee Chart</h1>
+      <h1 className="text-black font-bold text-2xl flex justify-center mt-6">Pie Chart</h1>
       <PieChart jsonData={jsonData}/>
   </>
   )
