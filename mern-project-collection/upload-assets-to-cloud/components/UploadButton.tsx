@@ -17,10 +17,6 @@ const UploadButton = () => {
 
     updateInfo(result?.info);
 
-    console.log("Result : ", result);
-    console.log("Widget : ", widget);
-
-
     widget.close({
       quiet: true
     });
