@@ -23,7 +23,6 @@ const UploadButton = () => {
   }
 
   let uploadPreset = process.env.NEXT_PUBLIC_UPLOAD_PRESET;
-  console.log("Upload preset : ", uploadPreset)
 
 
   return (
