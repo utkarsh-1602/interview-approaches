@@ -399,3 +399,95 @@ Example: In an e-commerce app, you might conditionally render a "Buy Now" button
 
         // Usage in another component:
         <EnhancedProductDetails productId={123} />
+
+
+
+**Testing**:
+- In React, there are three main types of testing that ensure the quality and functionality of your application:
+
+1. Unit Testing:
+
+Focus: Individual components and functions in isolation.
+Purpose: Verify that each component renders and behaves as expected with specific inputs and outputs.
+Techniques: Use libraries like Jest and React Testing Library to mock dependencies and simulate user interactions.
+Example: Testing if a button component correctly changes its text when clicked.
+
+
+`TaskList.test.js`
+
+        import React from 'react';
+        import { render, fireEvent } from '@testing-library/react';
+        import TaskList from './TaskList';
+
+        test('renders tasks with titles and completion status', () => {
+        const tasks = [
+            { id: 1, title: 'Task 1', completed: false },
+            { id: 2, title: 'Task 2', completed: true },
+        ];
+        const { getByText } = render(<TaskList tasks={tasks} />);
+
+        expect(getByText('Task 1')).toBeInTheDocument();
+        expect(getByText('Task 2')).toBeInTheDocument();
+        expect(getByText('Incomplete')).toBeInTheDocument();
+        expect(getByText('Completed')).toBeInTheDocument();
+        });
+
+        test('toggles task completion on click', () => {
+        const tasks = [{ id: 1, title: 'Task 1', completed: false }];
+        const { getByText } = render(<TaskList tasks={tasks} />);
+
+        const taskCheckbox = getByText('Task 1').closest('label').querySelector('input');
+        fireEvent.click(taskCheckbox);
+
+        expect(tasks[0].completed).toBe(true); // Assuming tasks state is updated
+        });
+
+
+
+2. Component Testing:
+
+Focus: Integration of components and their interaction with data and props.
+Purpose: Ensure components work together seamlessly and produce the desired output based on data flow.
+Techniques: Use libraries like Jest and React Testing Library to render components in a simulated environment and test their interactions.
+Example: Testing if a TaskList component filters tasks correctly based on a selected status.
+
+`TaskList.test.js` (continued)
+
+        test('filters tasks by completion status', () => {
+        const tasks = [
+            { id: 1, title: 'Task 1', completed: false },
+            { id: 2, title: 'Task 2', completed: true },
+        ];
+        const { getByText } = render(<TaskList tasks={tasks} />);
+
+        const filterButton = getByText('Completed');
+        fireEvent.click(filterButton);
+
+        expect(getByText('Task 1')).not.toBeInTheDocument();
+        expect(getByText('Task 2')).toBeInTheDocument();
+        });
+
+
+3. End-to-End (E2E) Testing:
+
+Focus: User experience and overall application flow in a real browser environment.
+Purpose: Simulate user interactions and verify that the entire application behaves as expected from the user's perspective.
+Techniques: Use libraries like Cypress to automate user actions and test application behavior across different pages and scenarios.
+Example: Testing if a user can add a new task, mark it complete, and see it reflected in the UI.
+
+
+`TaskList.spec.js`
+
+        describe('TaskList component', () => {
+        it('allows marking tasks as complete', () => {
+            cy.visit('/tasks');
+            cy.contains('Task 1').should('not.have.class', 'completed');
+
+            cy.contains('Task 1')
+            .closest('label')
+            .find('input')
+            .click();
+
+            cy.contains('Task 1').should('have.class', 'completed');
+        });
+        });
