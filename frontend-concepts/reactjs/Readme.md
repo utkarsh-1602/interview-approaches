@@ -344,3 +344,58 @@ Example: In an e-commerce app, you might conditionally render a "Buy Now" button
         };
 
         export default CounterComponent;
+
+
+
+**High Order Components (HOC)**: 
+- Reuse component logic by wrapping components.
+- Example: An E-commerce platform where we are displaying product Information with `ProductDetails` Component. We are adding `loading` state, while the product data is being fetched. Then we are conditionally displaying a `save to Wishlist` button based on user authentication.
+
+    `ProductDetails.js`
+
+        import React, { useState, useEffect } from 'react';
+
+        const withLoadingAndAuth = (WrappedComponent) => {
+        return class extends React.Component {
+            state = {
+            isLoading: true,
+            isAuthenticated: false, // Replace with actual authentication logic
+            };
+
+            componentDidMount() {
+            // Simulate fetching product data
+            setTimeout(() => {
+                this.setState({ isLoading: false });
+            }, 1000);
+
+            // Check user authentication status
+            this.setState({ isAuthenticated: true }); // Replace with actual check
+            }
+
+            render() {
+            const { isLoading, isAuthenticated } = this.state;
+            return (
+                <div>
+                {isLoading ? (
+                    <div>Loading product details...</div>
+                ) : (
+                    <WrappedComponent
+                    {...this.props}
+                    isAuthenticated={isAuthenticated}
+                    />
+                )}
+                </div>
+            );
+            }
+        };
+        };
+
+    `EnhancedProductDetails.js`
+
+        import ProductDetails from './ProductDetails';
+        import withLoadingAndAuth from './withLoadingAndAuth';
+
+        const EnhancedProductDetails = withLoadingAndAuth(ProductDetails);
+
+        // Usage in another component:
+        <EnhancedProductDetails productId={123} />
