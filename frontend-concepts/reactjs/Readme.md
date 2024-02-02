@@ -5,7 +5,7 @@
 - ReactJS's primary goal is to create User Interfaces (UI) which enhance the speed of programs. It makes use of virtual DOM (JavaScript object), which enhances the app's efficiency. Quicker than the standard DOM is the JavaScript virtual DOM.
 
 ## Important Concepts of Reactjs you should know as a frontend Developer 
-(Every Concept Consists of Real world Scenario usecase of it)
+> (Every Concept Consists of Real world Scenario usecase of it)
 
 **Components and props**: 
 - Components are the building blocks of a React application. They encapsulate the UI and functionality.
