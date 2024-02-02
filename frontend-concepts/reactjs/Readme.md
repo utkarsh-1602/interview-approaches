@@ -224,8 +224,10 @@ Example: In an e-commerce app, you might conditionally render a "Buy Now" button
 
 **Context API**:
 - The Context API is a feature in React that provides a way to share values, such as state or functions, between components without having to pass them through the intermediate components in the component tree. It's designed to solve the problem of "prop drilling," where you pass props through multiple levels of components that don't need the data directly but are required to relay it to deeper components.
+
 - Context consists of two main parts: the Provider and the Consumer. The Provider is responsible for making the value available to the components that need it, and the Consumer is used to consume that value.
-- Example: Creating a simple theme context.
+
+- Example: Storing user authentication status in a context so that any component in the app can access whether the user is logged in or not.
 
 
         import React, { createContext, useContext, useState } from 'react';
@@ -261,3 +263,84 @@ Example: In an e-commerce app, you might conditionally render a "Buy Now" button
 
 
 
+**Router and Navigation**:
+- Implement client-side navigation in a single-page application.
+- Example: Using React Router to navigate between different views in a blog app, such as viewing a list of posts and viewing the details of a specific post.
+
+        import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
+        const Home = () => <h2>Home</h2>;
+        const About = () => <h2>About</h2>;
+
+        const NavigationExample = () => {
+        return (
+            <Router>
+            <div>
+                <nav>
+                <ul>
+                    <li>
+                    <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                    <Link to="/about">About</Link>
+                    </li>
+                </ul>
+                </nav>
+
+                <Route path="/" exact component={Home} />
+                <Route path="/about" component={About} />
+            </div>
+            </Router>
+        );
+        };
+
+        export default NavigationExample;
+
+
+
+**Redux (State Management)**:
+- Redux is a predictable state container for JavaScript applications, commonly used with React to manage the state of an application in a more organized and centralized manner. It follows the principles of Flux architecture and provides a unidirectional data flow.
+- Detailed Information : https://github.com/utkarsh-1602/redux-shopdecor-app/issues/3
+- Example: Using Redux to manage the state of a shopping cart in an e-commerce app, ensuring consistency across different components.
+
+    `store.js`
+
+        import { createStore } from 'redux';
+
+        // Reducer
+        const counterReducer = (state = { count: 0 }, action) => {
+        switch (action.type) {
+            case 'INCREMENT':
+            return { count: state.count + 1 };
+            case 'DECREMENT':
+            return { count: state.count - 1 };
+            default:
+            return state;
+        }
+        };
+
+        // Store
+        const store = createStore(counterReducer);
+
+        export default store;
+
+
+    `CounterComponent.js`
+
+        import React from 'react';
+        import { useSelector, useDispatch } from 'react-redux';
+
+        const CounterComponent = () => {
+        const count = useSelector((state) => state.count);
+        const dispatch = useDispatch();
+
+        return (
+            <div>
+            <p>Count: {count}</p>
+            <button onClick={() => dispatch({ type: 'INCREMENT' })}>Increment</button>
+            <button onClick={() => dispatch({ type: 'DECREMENT' })}>Decrement</button>
+            </div>
+        );
+        };
+
+        export default CounterComponent;
