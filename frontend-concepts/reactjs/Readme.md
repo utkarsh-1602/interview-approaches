@@ -166,3 +166,59 @@ Example: In an e-commerce app, you might conditionally render a "Buy Now" button
 
         export default ControlledFormExample;
 
+
+**React Hooks**:
+- Hooks provide a more concise and readable way to handle state, side effects, and other React features.
+
+- example 1: `useState()` Allows functional components to manage local state.
+
+
+        const CounterExample = () => {
+        const [count, setCount] = useState(0);
+
+        return (
+        <div>
+            <p>Count: {count}</p>
+            <button onClick={() => setCount(count + 1)}>Increment</button>
+            <button onClick={() => setCount(count - 1)}>Decrement</button>
+        </div>
+        );
+        };
+
+
+- example 2: `useEffect()` Performs side effects in functional components (e.g., data fetching, subscriptions).
+
+
+        const DataFetchingExample = () => {
+        const [data, setData] = useState([]);
+
+        useEffect(() => {
+            // Perform data fetching or side effects here
+            fetchData().then((result) => setData(result));
+        }, []); // Empty dependency array means this effect runs once after initial render
+
+        return (
+            <div>
+            <ul>
+                {data.map((item) => (
+                <li key={item.id}>{item.name}</li>
+                ))}
+            </ul>
+            </div>
+        );
+        };
+
+- example 3: `useContext()` Allows functional components to consume values from React context.
+
+
+        const ThemeContext = React.createContext();
+
+        const ThemedComponent = () => {
+        const theme = useContext(ThemeContext);
+
+        return <p>Current Theme: {theme}</p>;
+        };
+
+
+
+
