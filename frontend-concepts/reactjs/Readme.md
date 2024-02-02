@@ -77,3 +77,37 @@
         );
         };
 
+
+
+**Conditional Rendering**:
+- Render different content based on certain conditions.
+Example: In an e-commerce app, you might conditionally render a "Buy Now" button only if the product is in stock.
+
+        const DiscountBanner = ({ showBanner }) => {
+        return (
+            <div>
+            {showBanner && <p>Special discount: 10% off on selected items!</p>}
+            </div>
+        );
+        };
+        // This is a conditional rendering statement. If showBanner is true, it will render the <p> element with the discount message. If showBanner is false, nothing will be rendered.
+
+
+
+
+**Lists and Keys**:
+- Render lists of items efficiently using keys for optimization.
+- Example: Displaying a list of comments on a blog post where each comment has a unique identifier (key) to help React efficiently update the list.
+
+
+        const ProductList = ({ products }) => {
+        return (
+            <ul>
+            {products.map((product) => (
+                <li key={product.id}>{product.name}</li>
+            ))}
+            </ul>
+        );
+        };
+
+
