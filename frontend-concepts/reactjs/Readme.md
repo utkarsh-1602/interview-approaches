@@ -22,3 +22,33 @@
         );
         };
     
+
+**State and Lifecycle**:
+- State is used to manage data within a component.
+- Lifecycle methods allow you to perform actions at different stages of a component's existence.
+- Example: In a real-time chat application, you might use state to manage the list of messages. The componentDidMount lifecycle method could be used to fetch initial messages when the component mounts.
+
+
+        class ShoppingCart extends Component {
+        constructor(props) {
+            super(props);
+            this.state = {
+            items: [],
+            };
+        }
+
+        componentDidMount() {
+            // Fetch shopping cart items from an API
+            // Update state with fetched items
+        }
+
+        render() {
+            return (
+            <div>
+                <h2>Your Shopping Cart</h2>
+                {/* Display shopping cart items */}
+            </div>
+            );
+        }
+        }
+
