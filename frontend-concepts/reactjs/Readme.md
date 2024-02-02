@@ -52,3 +52,28 @@
         }
         }
 
+
+**JSX (Javascript XML)**:
+- JSX is a syntax extension for JavaScript recommended by React. It looks similar to XML or HTML, making it easier to write React components.
+
+        const Header = () => {
+        return (
+            <header>
+            <h1>My E-commerce Store</h1>
+            </header>
+        );
+        };
+
+
+**Event Handling**:
+- React components can handle user events like clicks and input changes.
+- Example: In a to-do list application, you would use the onClick event to mark a to-do item as completed when a user clicks on it.
+
+        const AddToCartButton = ({ onClick }) => {
+        return (
+            <button onClick={onClick}>
+            Add to Cart
+            </button>
+        );
+        };
+
