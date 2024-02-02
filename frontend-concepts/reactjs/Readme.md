@@ -222,3 +222,42 @@ Example: In an e-commerce app, you might conditionally render a "Buy Now" button
 
 
 
+**Context API**:
+- The Context API is a feature in React that provides a way to share values, such as state or functions, between components without having to pass them through the intermediate components in the component tree. It's designed to solve the problem of "prop drilling," where you pass props through multiple levels of components that don't need the data directly but are required to relay it to deeper components.
+- Context consists of two main parts: the Provider and the Consumer. The Provider is responsible for making the value available to the components that need it, and the Consumer is used to consume that value.
+- Example: Creating a simple theme context.
+
+
+        import React, { createContext, useContext, useState } from 'react';
+
+        const ThemeContext = createContext();
+
+        const ThemeProvider = ({ children }) => {
+        const [theme, setTheme] = useState('light');
+
+        const toggleTheme = () => {
+            setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
+        };
+
+        return (
+            <ThemeContext.Provider value={{ theme, toggleTheme }}>
+            {children}
+            </ThemeContext.Provider>
+        );
+        };
+
+        const ThemedComponent = () => {
+        const { theme, toggleTheme } = useContext(ThemeContext);
+
+        return (
+            <div>
+            <p>Current Theme: {theme}</p>
+            <button onClick={toggleTheme}>Toggle Theme</button>
+            </div>
+        );
+        };
+
+        export { ThemeProvider, ThemedComponent };
+
+
+
