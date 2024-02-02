@@ -1,10 +1,10 @@
 # Reactjs 
 
-### What is Reactjs ? 
+## What is Reactjs ? 
 - React is a free and open-source front-end JavaScript library for building user interfaces based on components. It is maintained by Meta and a community of individual developers and companies. React can be used to develop single-page, mobile, or server-rendered applications with frameworks like Next.js.
 - ReactJS's primary goal is to create User Interfaces (UI) which enhance the speed of programs. It makes use of virtual DOM (JavaScript object), which enhances the app's efficiency. Quicker than the standard DOM is the JavaScript virtual DOM.
 
-### Important Concepts of Reactjs you should know as a frontend Developer 
+## Important Concepts of Reactjs you should know as a frontend Developer 
 (Every Concept Consists of Real world Scenario usecase of it)
 
 **Components and props**: 
