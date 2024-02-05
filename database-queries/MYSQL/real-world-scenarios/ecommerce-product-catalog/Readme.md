@@ -1,0 +1,4 @@
+# Ecommerce Product Catalog 
+In an e-commerce application, you might need to store information about products and categories.
+
+**CONSTRAINT fk_category FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID)** : This line defines a foreign key constraint named fk_category. It indicates that the CategoryID column in the Products table is a foreign key that references the CategoryID column in the Categories table. This establishes a relationship between the Products and Categories tables, ensuring that the values in the CategoryID column of the Products table must match existing values in the CategoryID column of the Categories table

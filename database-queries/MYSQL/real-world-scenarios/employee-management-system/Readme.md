@@ -24,6 +24,35 @@ A scenario where you need to manage employee information in a company.
 - In the context of a relational database, the term "REFERENCES" is used when defining a foreign key constraint. It specifies the relationship between two tables by indicating that a column or a set of columns in one table refers to the primary key of another table.
 - Let's consider a scenario where you have two tables: one for storing information about students and another for storing information about courses they are enrolled in.
 
+                -- Create Students Table
+                CREATE TABLE Students (
+                StudentID INT PRIMARY KEY,
+                FirstName VARCHAR(50),
+                LastName VARCHAR(50),
+                CONSTRAINT pk_student_id UNIQUE (StudentID)
+                );
+
+                -- Create Courses Table
+                CREATE TABLE Courses (
+                CourseID INT PRIMARY KEY,
+                CourseName VARCHAR(100),
+                Instructor VARCHAR(50),
+                CONSTRAINT pk_course_id UNIQUE (CourseID)
+                );
+
+                -- Create Enrollments Table with Foreign Keys
+                CREATE TABLE Enrollments (
+                EnrollmentID INT PRIMARY KEY,
+                StudentID INT,
+                CourseID INT,
+                EnrollmentDate DATE,
+                CONSTRAINT fk_student FOREIGN KEY (StudentID) REFERENCES Students(StudentID),
+                CONSTRAINT fk_course FOREIGN KEY (CourseID) REFERENCES Courses(CourseID)
+                );
+
+- The foreign key constraints (fk_student and fk_course) in the Enrollments table indicate that the StudentID column refers to the StudentID column in the Students table, and the CourseID column refers to the CourseID column in the Courses table.
+
+
 
 **CONSTRAINT fk_department FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID)**: 
 - This SQL statement is creating a foreign key constraint named fk_department on the DepartmentID column in a table, and it references the DepartmentID column in another table named Departments.

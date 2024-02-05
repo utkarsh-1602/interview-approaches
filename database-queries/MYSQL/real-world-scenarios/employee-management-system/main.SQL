@@ -11,3 +11,7 @@ CREATE TABLE Employee {
 }
 
 -- Create Department Table
+CREATE TABLE Departments {
+    DepartmentID INT PRIMARY KEY,
+    DepartmentName VARCHAR(50),
+}
