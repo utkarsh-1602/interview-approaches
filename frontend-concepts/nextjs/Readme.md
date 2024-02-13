@@ -1,3 +1,2 @@
-# Important concepts of Next.js 
-
+# Important concepts of Next.js
 
