@@ -39,13 +39,13 @@ Microtasks have higher priority than macrotasks and are executed before macrotas
 - When the execution stack is empty (after synchronous code execution), the event loop checks the microtask queue. If there are microtasks, they are executed one by one until the microtask queue is empty. After that, the event loop checks the macrotask queue and executes the next macrotask. This process continues in a loop.
 
 ## How do Event loops work?
-1. Call Stack: JavaScript uses a call stack to keep track of the currently executing function (where the program is in its execution).
+1. execution Stack: JavaScript uses a execution stack to keep track of the currently executing function (where the program is in its execution).
 
-2. Callback Queue:Asynchronous operations, such as I/O operations or timers, are handled by the browser or Node.js runtime. When these operations are complete, corresponding functions (callbacks) are placed in the callback queue. When defining setTimeOut function, After the timer gets expired, the callback function is put inside the Callback Queue, and the Event Loop checks if the Call Stack is empty and if empty, pushes the callback function from Callback Queue to Call Stack and the callback function gets removed from the Callback Queue.
+2. Callback Queue:Asynchronous operations, such as I/O operations or timers, are handled by the browser or Node.js runtime. When these operations are complete,  these callbacks are placed in the callback queue. When defining setTimeOut function, After the timer gets expired, the callback function is put inside the Callback Queue, and the Event Loop checks if the execution Stack is empty and if empty, pushes the callback function from Callback Queue to execution Stack and the callback function gets removed from the Callback Queue.
 
-3. Event Loop: The event loop continuously checks the call stack and the callback queue. If the call stack is empty, it takes the first function from the callback queue and pushes it onto the call stack for execution.
+3. Event Loop: The event loop continuously checks the execution stack and the callback queue. If the execution stack is empty, it takes the first function from the callback queue and pushes it onto the execution stack for execution.
 
-4. Execution: The function on top of the call stack is executed. If this function contains asynchronous code, it might initiate further asynchronous operations.
+4. Execution: The function on top of the execution stack is executed. If this function contains asynchronous code, it might initiate further asynchronous operations.
 
 5. Callback Execution: When an asynchronous operation is complete, its callback is placed in the callback queue.
 

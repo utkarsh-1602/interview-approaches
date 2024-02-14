@@ -17,3 +17,11 @@ It makes the code wait until the promise returns a result.
 - The execution of JavaScript code only completes in a thread, but things like reading files or reading/writing from the network happen “in the background”, outside of JS’s normal flow of control. Promises and async/await are how those kind of background processes are synchronized back to JS’s main thread.
 - To perform execution of such networking operation or I/O operation it use system thread. Once that operation is completed , it will be moved into the front of the queue.
 - When an async task gets blocked on I/O, it gets moved onto the system thread, which runs at the same time as the main thread, and runs all I/O simultaneously (using the OS’s scheduling primitives). When the I/O completes, it gets put back onto the queue with a “ready” priority, where it will then get de-queued and scheduled on the main thread again.
+
+
+# Process of asynchronous function working 
+1. When an asynchronous operation is encountered within an async function, it is initiated. For example, if it's a promise, the promise begins its execution.
+2. While the asynchronous operation is in progress, the JavaScript runtime continues to execute other synchronous code in the execution stack.
+3. Once the asynchronous operation completes, its associated callback function (or promise resolution) is enqueued into the callback queue.
+4. The event loop continually checks the callback queue for tasks. When the execution stack is empty (meaning there's no more synchronous code to execute), the event loop takes the first task from the callback queue and moves it to the execution stack for execution.
+
