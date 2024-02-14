@@ -20,58 +20,6 @@ new Promise(function (resolve, reject) {
   }, 0);
 });
 
-/*
-    => begins 
-    (macrotask settimeout iteration2 
-        => settimeout 1 
-        => promise 1 
-        ) 
-    (microtask promise
-    => promise 2 
-    (macrotask settimeout iteration 2 
-        setimeout2 
-        )
-    unresolved -> resolved 
-    )
-    dot then 1 
-
-    begines
-    promise 2 
-    setimeout1
-    promise 1 
-    setimeout2
-    dot then 1 
-    resolve 1 
-
-*/
-
-/*
-
-    begins 
-    settimeout - iteration2 
-    promise2 
-    settimeout - iteration2 
-    dot then 1 
-    settimeout - iteration2
-    settimeout 1 
-    promise1 
-    settimeout 2 
-    resolve 1 
-    res 
-
-
-    final output : 
-    begins
-    promise2
-    dot then 1 
-    settimeout 1 
-    promise 1 
-    settimeout 2 
-    resolve 1 
-    res 
-
-    wrong 
- */
 
 // Solution 
 /*
@@ -85,4 +33,13 @@ Because the macrotask will only execute the first item each time, we turn to the
 
 In the macrotasks queue, there is a setTimeout, so it prints setTimeout 2. Then since resolve is called here, it enters .then and prints out dot then 1. And setTimeout will be put in the macrotask queue, because the microtask queue is empty now, setTimeout in the macrotask queue will be put on the execution stack, and then print console.log(res). The value of resolve is resolve 1, so resolve 1 is printed at the end.
 
+begins 
+promise 2 
+setTimeout 1
+promise 1 
+setTimeout 2
+dot then 1 
+resolve 1 
+
 */
+
