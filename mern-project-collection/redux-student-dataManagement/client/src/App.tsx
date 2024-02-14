@@ -1,5 +1,5 @@
 import './App.css'
-import {StudentData} from './components/StudentData'
+import StudentData from './components/StudentData'
 
 function App() {
 
