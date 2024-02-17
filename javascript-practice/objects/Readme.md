@@ -14,3 +14,16 @@ In JavaScript, an object is a data type that represents a collection of key-valu
         };
 
 
+## Computed Properties
+Computed properties in JavaScript allow you to define object properties dynamically using a function. They are defined using square brackets [] around the property name, and inside the brackets, you put an expression that will be evaluated to determine the property name.
+
+        const property = "utkarsh"
+        const name = "x" 
+
+        const user = {
+            [property]: name
+        }
+
+        console.log(user); // utkarsh x
+
+
