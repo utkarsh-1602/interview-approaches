@@ -1,9 +1,9 @@
 # MongoDB Inteview Questions 
 
-### What is MongoDB 
+## What is MongoDB 
 - MongoDB is a document-oriented NoSQL database. It stores data in flexible, JSON-like documents, making it easy to work with.
 
-### What are some Alternatives to MongoDB ?
+## What are some Alternatives to MongoDB ?
 Some alternatives to MongoDB in the NoSQL realm include:
 
         Cassandra
@@ -20,7 +20,7 @@ Some alternatives to MongoDB in the NoSQL realm include:
 
 
 
-### How does MongoDB store Data ? 
+## How does MongoDB store Data ? 
 - MongoDB stores data in a binary format called BSON (Binary JSON).
 - BSON is a binary-encoded serialization of JSON-like documents.
 - Each document is composed of key-value pairs where the values can be various data types supported by BSON, including **strings, numbers, dates, arrays, nested documents, binary data, and more**.
@@ -29,7 +29,7 @@ Some alternatives to MongoDB in the NoSQL realm include:
 - This flexibility allows for a schema-less or dynamic schema approach, where documents within the same collection can have different sets of fields.
 - Collections can contain multiple documents, and MongoDB allows for flexible schema designs within each collection.
 
-### Mongodb is schemaless db, if yes, then how do you create a schema in mongodb ? 
+## Mongodb is schemaless db, if yes, then how do you create a schema in mongodb ? 
 - While MongoDB is often considered schema-less, developers can still enforce a schema by defining a structure for documents using JSON-like schemas called "schemas" or "validation rules" using MongoDB's schema validation feature.
 
         db.createCollection("users", {
@@ -58,15 +58,15 @@ Some alternatives to MongoDB in the NoSQL realm include:
 
 - This example creates a collection called "users" and defines a schema validation rule where each document must have "name" and "age" fields. The "name" field must be a string, and the "age" field must be an integer. Additionally, it allows for an optional "email" field, which must be a string and match the specified regular expression pattern for an email address.
 
-### How mongodb is Different than SQL and better than MYSQL ? 
+## How mongodb is Different than SQL and better than MYSQL ? 
 - MongoDB is a NoSQL database, while SQL and MySQL are relational databases. MongoDB is better suited for handling unstructured or semi-structured data, offers scalability, flexibility, and faster performance for certain types of applications compared to MySQL.
 - MongoDB offers more scalability and flexibility through features like sharding, which allows for horizontal scaling, and flexible schema design, enabling easier adaptation to changing data structures compared to MySQL.
 
-### what are different data models in mongodb ?
+## what are different data models in mongodb ?
 - In MongoDB, the main data model is the document-oriented model, which stores data in flexible, JSON-like documents.
 - Additionally, MongoDB supports other data models like key-value, wide-column, and graph through its various data storage engines and features like GridFS for storing large binary data.
 
-### What is Indexing in MongoDB ? 
+## What is Indexing in MongoDB ? 
 - Indexing in MongoDB is a way to optimize query performance by creating an index on a field or a set of fields in a collection. This helps MongoDB quickly locate documents matching a query condition without needing to perform a full collection scan.
 
 
@@ -77,7 +77,7 @@ Some alternatives to MongoDB in the NoSQL realm include:
         db.books.createIndex({title: 1})
 
 
-### How indexing works in MongoDB ?
+## How indexing works in MongoDB ?
 
 - In MongoDB, indexing works by creating data structures that store references to documents based on the indexed fields.
 
@@ -86,7 +86,7 @@ Some alternatives to MongoDB in the NoSQL realm include:
 - MongoDB automatically maintains indexes as documents are inserted, updated, or deleted, ensuring that the index remains up-to-date with the underlying data.
 
 
-### What is MongoDB Replication ? 
+## What is MongoDB Replication ? 
 
 - MongoDB replication is a feature that allows you to create multiple copies of your data across different servers called replica sets.
 - In a replica set, one server acts as the primary node, handling all write operations, while the other servers, known as secondary nodes, replicate data from the primary node and can serve read operations.
@@ -148,3 +148,21 @@ In this scenario, we'll use MongoDB replication to ensure that the application r
 
 - `rs.initiate()`, Initiates a replica set.
 - This code initializes a replica set named myReplicaSet with the specified members. After initialization, you can check the status of the replica set to ensure that all nodes are up and running.
+
+## What is Sharding in MongoDB ?
+- Sharding is a method of horizontally partitioning data across multiple servers in a distributed database system like MongoDB.
+
+- It involves splitting a large dataset into smaller, more manageable chunks called shards and distributing these shards across multiple servers, known as shard servers or nodes. 
+
+- Each shard server holds a subset of the data, and collectively they form a single logical database.
+
+- Sharding provides scalability by allowing a database to handle larger datasets and higher throughput by distributing the workload across multiple servers.
+
+- **Example**, Imagine you have a collection of customer data with millions of records. Instead of storing all of this data on a single server, you can split it into smaller chunks based on, say, the geographical region of the customers. you might have one shard for customers in North America, another for customers in Europe, and so on. Each shard contains only a portion of the total dataset.
+
+## Explain Horizontal and Vertical Scaling 
+
+- **Horizontal scaling**: Adding more machines or servers to distribute the load, each handling a portion of the overall workload.
+- **Vertical scaling**: Increasing the resources (such as CPU, RAM, or storage) on a single machine to handle increased demand.
+
+!["Horizontal & Vertical Scaling"](horizontalVerticalScaling.png)
