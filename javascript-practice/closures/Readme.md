@@ -12,3 +12,8 @@
 - Inside the outer function, an inner function is defined (function(y) { ... }).
 - The inner function is immediately invoked with the argument 2. Inside this inner function, it logs the value of x, which is 1.
 - Even though the outer function has already executed and exited, the inner function still has access to the variable x from its outer scope, thanks to the closure mechanism.
+
+## Closure Scope chain 
+- The "scope chain" refers to how JavaScript looks for variables when the code is executed. When you try to access a variable in JavaScript, it first checks the local scope (inside the current function). If the variable is not found there, it looks in the outer function's scope, and if it's still not found, it keeps going up the chain until it reaches the global scope.
+
+- So, the "closure scope chain" is the path that JavaScript follows to find variables when you're inside a nested function, going from the inner function's scope to the outer function's scope and eventually to the global scope
