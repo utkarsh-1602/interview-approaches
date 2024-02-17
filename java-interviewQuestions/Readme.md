@@ -64,5 +64,35 @@
 
 - But If the **System.exit() method** is called or a system crash occurs, the finally block will not be executed
 
-### What methods does the object class have ? 
+### How can you make a class Immutable ? 
+To make a class immutable in Java, follow these guidelines:
 
+- Declare the class as final to prevent subclassing.
+- Declare all fields as private and final to ensure they cannot be modified after object construction.
+- Do not provide setter methods for any fields.
+- If the class contains mutable objects (objects whose state can be changed), ensure that they are defensively copied in constructors and getter methods to prevent external modification.
+
+### What is singleton class in Java ? and How can we make a singleton class ? 
+- Singleton class is a class whose only one instance can be created at any given time, in one JVM. 
+
+- To make a singleton class in Java, you typically follow these steps:
+
+1. Declare a `private static` instance variable of the class itself, which will hold the single instance of the class.
+2. Make the constructor `private` to prevent instantiation of the class from outside.
+3. Provide a `public static` method that returns the instance of the class. This method should create the instance if it doesn't exist or return the existing instance.
+
+
+                public class Singleton {
+                private static Singleton instance;
+                
+                private Singleton() {
+                        // Private constructor to prevent instantiation
+                }
+                
+                public static Singleton getInstance() {
+                        if (instance == null) {
+                        instance = new Singleton();
+                        }
+                        return instance;
+                }
+                }
