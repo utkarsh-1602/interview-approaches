@@ -77,3 +77,8 @@ In JavaScript, when you create a copy of an object, there are two common approac
 
 - **Shallow copy** is like making a photocopy of a book's table of contents without duplicating the content of each chapter. You still have references to the original pages.
 - **Deep copy** is like making a photocopy of the entire book, including all chapters and sub-chapters. You have a completely separate copy.
+
+### Checkout these examples 
+- [Q16](interviewQuestions/Q16.js)
+- [Q17](interviewQuestions/Q17.js)
+- [Q18](interviewQuestions/Q18.js)
