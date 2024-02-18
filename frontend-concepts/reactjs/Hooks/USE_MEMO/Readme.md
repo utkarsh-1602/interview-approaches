@@ -5,7 +5,7 @@ In React, useMemo memoizes the result of a function so that the function is not 
 
 The basic syntax of useMemo is as follows:
 ```javascript
-const cachedValue = useMemo(calculateValue, dependencies)
+const cachedValue = useMemo(functionToCalculateValue, [dependencies])
 ```
 - The function calculating the value that you want to cache. It should be pure, should take no arguments, and should return a value of any type. React will call your function during the initial render. On next renders, React will return the same value again if the dependencies have not changed since the last render. Otherwise, it will call calculateValue, return its result, and store it so it can be reused later.
 
