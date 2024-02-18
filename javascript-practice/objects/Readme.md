@@ -50,3 +50,6 @@ In JavaScript, object referencing is a concept that deals with how variables poi
 
 
 - Also look at example [Q11](interviewQuestions/Q11.js)
+
+- In JavaScript, when comparing objects, the comparison is based on reference rather than the contents of the objects. This means that two objects are considered equal only if they reference the same memory location, regardless of whether their property names and values are identical. If two objects with identical property names and values are created separately, they will occupy different memory locations, leading to a comparison result of false. check this example [Q12](interviewQuestions/Q12.js)
+- In JavaScript, assigning null to a variable only removes the reference to an object; it doesn't delete the object itself. The object will be removed by the garbage collector once there are no more references to it.
