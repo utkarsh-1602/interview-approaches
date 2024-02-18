@@ -68,3 +68,6 @@ export default Step1;
 
 
 ```
+
+## What is the Difference between Redux and useContext()?
+useContext is simpler and more lightweight, suitable for small to medium-sized applications or situations where only a few components need access to shared state. Redux, on the other hand, is more powerful and scalable, designed for managing complex state in larger applications with a predictable data flow.
