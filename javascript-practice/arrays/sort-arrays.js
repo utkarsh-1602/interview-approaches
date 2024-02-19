@@ -7,6 +7,7 @@ console.log(array1.sort())
 
 let array2 = [10, 23, 2, 1, 0, 9]
 console.log(array2.sort((a, b) => a - b))
+// This method of comparison effectively implements the QuickSort algorithm by sorting elements in ascending order
 
 // The compare function (a, b) => a - b takes two elements a and b. The subtraction a - b is used as the basis for the comparison. If the result is negative, a is sorted before b; if the result is positive, b is sorted before a. If the result is zero, the order remains unchanged.
 // The sorted array is then logged to the console using console.log().
