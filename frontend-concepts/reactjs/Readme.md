@@ -11,7 +11,7 @@ Refer: https://blog.webdevsimplified.com/2022-07/react-folder-structure/
 > (Every Concept Consists of Real world Scenario usecase of it)
 
 **Components and props**: 
-- Components are the building blocks of a React application. They encapsulate the UI and functionality.
+- Components are the building blocks of a React application. They are like reusable pieces of code that represent different parts of a user interface.
 - props allow data to be passed from a parent component to a child component.
 - Example: Imagine a blog application where you have a Post component. You pass the post details (title, author, content) as props to the Post component from a parent component.
 
@@ -86,14 +86,13 @@ Refer: https://blog.webdevsimplified.com/2022-07/react-folder-structure/
 - Render different content based on certain conditions.
 Example: In an e-commerce app, you might conditionally render a "Buy Now" button only if the product is in stock.
 
-        const DiscountBanner = ({ showBanner }) => {
+        const EcommerceStore = ({ productInStock }) => {
         return (
             <div>
-            {showBanner && <p>Special discount: 10% off on selected items!</p>}
+            {productInStock && <p>Buy Now</p>}
             </div>
         );
         };
-        // This is a conditional rendering statement. If showBanner is true, it will render the <p> element with the discount message. If showBanner is false, nothing will be rendered.
 
 
 
