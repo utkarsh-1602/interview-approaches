@@ -25,6 +25,9 @@ const useMusicPlayer = () => {
       state.audioPlayer.play();
     }
     setState(state => ({ ...state, isPlaying: !state.isPlaying }));
+    //...state is known as the spread syntax in JavaScript. It is used to create a shallow copy of the state object. This syntax is often used in React.js or other JavaScript applications to create new objects with some properties from an existing object while also adding new properties or overriding existing ones.
+
+
     console.log(state)
   }
 
