@@ -8,3 +8,6 @@ for(var i = 0; i <3; i++){
     }
     inner(i)
 }
+
+// In the code you provided, when you call the inner function inside the loop, it creates a closure over the i variable. This means that each time inner is called, it captures the current value of i and associates it with the callback function passed to setTimeout.
+
