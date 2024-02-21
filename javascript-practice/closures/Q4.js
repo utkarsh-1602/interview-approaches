@@ -9,3 +9,5 @@ var addSix = createBase(6);
 
 addSix(10);
 addSix(20);
+
+createBase(10)(1);
