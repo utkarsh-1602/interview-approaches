@@ -37,7 +37,3 @@ To ensure callback functions do not block the main thread, you can use asynchron
 - **Synchronous callbacks** execute immediately, blocking other operations until completion. synchronous Callback functions are used when one step in a process needs to wait for a previous step to finish before it can continue.
 
 - **Asynchronous callbacks**, however, don’t block execution and are typically used for tasks like I/O operations that can take unpredictable time to complete. These functions return immediately while the task runs in the background, allowing other operations to proceed concurrently. When the task finishes, the callback function is invoked with the result
-
-## What are the potential disadvantages of using Callback Functions and how can they be mitigated?
-Callback functions, while useful in asynchronous programming, can lead to “callback hell” due to nested callbacks making code hard to read and debug. This issue is Worsened when dealing with error handling as each callback requires its own error handling routine.
-
