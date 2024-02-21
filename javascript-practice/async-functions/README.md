@@ -1,5 +1,5 @@
 # What is async Function ?
-Asynchronous programming is a technique that enables your program to start a potentially long-running task and still be able to be responsive to other events while that task runs, rather than having to wait until that task has finished. Once that task has finished, your program is presented with the result.
+Asynchronous programming is a technique that enables the program to start a long-running task and also be responsive to other events while that task runs, rather than have to wait until that task has finished. Once that task has finished, your program gives the output.
 
 # What is await Function ?
 Await function is used to wait for the promise. It could be used within the async block only.
