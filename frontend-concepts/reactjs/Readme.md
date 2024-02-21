@@ -10,18 +10,82 @@ Refer: https://blog.webdevsimplified.com/2022-07/react-folder-structure/
 ## Important Concepts of Reactjs you should know as a frontend Developer 
 > (Every Concept Consists of Real world Scenario usecase of it)
 
+### What is DOM ?
+The DOM (Document Object Model) is a programming interface for web documents. It represents the structure of HTML (or XML) documents as a tree-like model, where each node represents a part of the document, such as elements, attributes, and text.
+
+### What is Virtual DOM ?
+- The Virtual DOM is a lightweight copy of the Real DOM, maintained by libraries like React.js. It's a JavaScript representation of the actual DOM.
+- When changes are made to the data or state of a web application, React re-renders the components affected by those changes.
+- Instead of directly manipulating the Real DOM for every change, React first updates the Virtual DOM.
+- React then compares the updated Virtual DOM with the previous version to determine the minimal set of changes needed to update the Real DOM.
+Finally, React applies only those necessary changes to the Real DOM, resulting in efficient updates.
+
+
+### What is difference between Elements and Components ? 
+
+**React Elements**:
+- React elements are the smallest building blocks of React applications. 
+- React elements are typically created using JSX syntax or React.createElement() function.
+- React elements describe what you want to see on the screen in terms of the desired UI, but they are not actual DOM elements.
+
+```javascript 
+const element = <h1>Hello, world!</h1>;
+```
+
+**React Components**:
+- React components are reusable, self-contained units of code that encapsulate a piece of UI.
+- They are typically created by extending React.Component class or by using functional components.
+Components can accept inputs called props and return React elements describing what should appear on the screen.
+- React components are like little packages of code that you can use to build your website or app.
+- Components can also have state, which allows them to manage dynamic data and respond to user interactions.
+
+
 ### Component Lifecycle:
 - In React, the component lifecycle refers to the series of stages that a React component goes through from its initialization to its removal from the DOM (Document Object Model). 
 
 Here's a brief overview of the component lifecycle phases in React:
+1. **Initialization**: 
+`constructor()`: This method is called when a component is initialized. It's used for initializing state and binding event handlers. 
+- In React, when we say "binding event handlers," we are referring to the process of associating a function (the event handler) with a particular event on a DOM element.
 
+```javascript
+class MyComponent extends React.Component {
+  handleClick() {
+    console.log('Button clicked!');
+  }
 
+  render() {
+    return (
+      <button onClick={this.handleClick}>Click me</button>
+    );
+  }
+}
+```
+
+2. **Mounting**:
+- `componentWillMount()`: ***Deprecated***. This method is called just before the component is mounted to the DOM.
+- `render()`: This method is responsible for rendering the component's UI. It returns React elements.
+- `componentDidMount()`: : This method is called after the component is mounted to the DOM. It's often used for performing tasks like fetching data from a server.
+
+3. **Updating**:
+- `componentWillReceiveProps()`: **Deprecated**. This method is called when the component is receiving new props. It's used to update state based on the new props.
+- `shouldComponentUpdate()`: This method is called before rendering when new props or state are received. It allows you to control if the component should re-render or not.
+- `componentWillUpdate()`: Deprecated. This method is called just before rendering when new props or state are received.
+- `render()`: Same as in the mounting phase.
+- `componentDidUpdate()`: This method is called after the component's updates are flushed to the DOM. It's often used for DOM manipulations or additional data fetching.
+
+4. **Unmounting**:
+- `componentWillUnmount()`: This method is called just before the component is removed from the DOM. It's used for cleanup tasks like removing event listeners or canceling timers.
+
+5. **Error Handling** (optional):
+- `componentDidCatch()`: This method is called when there's an error during rendering, in a lifecycle method, or in the constructor of any child component.
+
+React 16.3 introduced some changes to the lifecycle methods and added some new methods like getDerivedStateFromProps() and getSnapshotBeforeUpdate(). Additionally, with the introduction of React Hooks, there's an alternative way to handle component lifecycle and state management using functional components.
 
 ### Components and props: 
 - Components are the building blocks of a React application. They are like reusable pieces of code that represent different parts of a user interface.
 - props allow data to be passed from a parent component to a child component.
 - Example: Imagine a blog application where you have a Post component. You pass the post details (title, author, content) as props to the Post component from a parent component.
-
     
         const ProductComponent = (props) => {
         return (
