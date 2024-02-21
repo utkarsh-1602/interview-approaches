@@ -10,8 +10,14 @@ Refer: https://blog.webdevsimplified.com/2022-07/react-folder-structure/
 ## Important Concepts of Reactjs you should know as a frontend Developer 
 > (Every Concept Consists of Real world Scenario usecase of it)
 
+### Component Lifecycle:
+- In React, the component lifecycle refers to the series of stages that a React component goes through from its initialization to its removal from the DOM (Document Object Model). 
 
-**Components and props**: 
+Here's a brief overview of the component lifecycle phases in React:
+
+
+
+### Components and props: 
 - Components are the building blocks of a React application. They are like reusable pieces of code that represent different parts of a user interface.
 - props allow data to be passed from a parent component to a child component.
 - Example: Imagine a blog application where you have a Post component. You pass the post details (title, author, content) as props to the Post component from a parent component.
@@ -27,7 +33,7 @@ Refer: https://blog.webdevsimplified.com/2022-07/react-folder-structure/
         };
     
 
-**JSX (Javascript XML)**:
+### JSX (Javascript XML):
 - JSX is a syntax extension for JavaScript recommended by React. It looks similar to XML or HTML, making it easier to write React components.
 
         const Header = () => {
@@ -39,7 +45,7 @@ Refer: https://blog.webdevsimplified.com/2022-07/react-folder-structure/
         };
 
 
-**Event Handling**:
+### Event Handling:
 - React components can handle user events like clicks and input changes.
 - Example: In a to-do list application, you would use the onClick event to mark a to-do item as completed when a user clicks on it.
 
@@ -53,7 +59,7 @@ Refer: https://blog.webdevsimplified.com/2022-07/react-folder-structure/
 
 
 
-**Conditional Rendering**:
+### Conditional Rendering:
 - Render different content based on certain conditions.
 Example: In an e-commerce app, you might conditionally render a "Buy Now" button only if the product is in stock.
 
@@ -68,7 +74,7 @@ Example: In an e-commerce app, you might conditionally render a "Buy Now" button
 
 
 
-**Lists and Keys**:
+### Lists and Keys:
 - Render lists of items efficiently using keys for optimization.
 - Example: Displaying a list of comments on a blog post where each comment has a unique identifier (key) to help React efficiently update the list.
 
@@ -84,7 +90,7 @@ Example: In an e-commerce app, you might conditionally render a "Buy Now" button
         };
 
 
-**Forms and Controlled Components**:
+### Forms and Controlled Components:
 - Manage form input state using React state.
 - Example: Building a user registration form where the input values are controlled by React state, allowing you to validate and submit the form.
 
@@ -140,7 +146,7 @@ Example: In an e-commerce app, you might conditionally render a "Buy Now" button
         export default ControlledFormExample;
 
 
-**React Hooks**:
+### React Hooks:
 - Hooks provide a more concise and readable way to handle state, side effects, and other React features.
 
 - example 1: `useState()` Allows functional components to manage local state.
@@ -193,7 +199,7 @@ Example: In an e-commerce app, you might conditionally render a "Buy Now" button
         };
 
 
-**Router and Navigation**:
+### Router and Navigation:
 - Implement client-side navigation in a single-page application.
 - Example: Using React Router to navigate between different views in a blog app, such as viewing a list of posts and viewing the details of a specific post.
 
@@ -228,7 +234,7 @@ Example: In an e-commerce app, you might conditionally render a "Buy Now" button
 
 
 
-**Redux (State Management)**:
+### Redux (State Management):
 - Redux is a predictable state container for JavaScript applications, commonly used with React to manage the state of an application in a more organized and centralized manner. It follows the principles of Flux architecture and provides a unidirectional data flow.
 - Detailed Information : https://github.com/utkarsh-1602/redux-shopdecor-app/issues/3
 - Example: Using Redux to manage the state of a shopping cart in an e-commerce app, ensuring consistency across different components.
@@ -277,7 +283,7 @@ Example: In an e-commerce app, you might conditionally render a "Buy Now" button
 
 
 
-**High Order Components (HOC)**: 
+### High Order Components (HOC): 
 - Reuse component logic by wrapping components.
 - Example: An E-commerce platform where we are displaying product Information with `ProductDetails` Component. We are adding `loading` state, while the product data is being fetched. Then we are conditionally displaying a `save to Wishlist` button based on user authentication.
 
@@ -332,7 +338,7 @@ Example: In an e-commerce app, you might conditionally render a "Buy Now" button
 
 
 
-**Testing**:
+### Testing:
 - In React, there are three main types of testing that ensure the quality and functionality of your application:
 
 1. Unit Testing:
