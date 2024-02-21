@@ -1,7 +1,7 @@
 # Promises
 
 ### What are Promises ? 
-- Promises are like normal classes in Javascript. Assume you are creating your own Promise implementation, your promise class would roughly look like this. Notice in your constructor you are expecting a method to be passed that you call immediately passing `resolve` and `reject` as parameters.
+- A promise in JavaScript is an object representing the eventual completion or failure of an asynchronous operation. Notice in your constructor you are expecting a method to be passed that you call immediately passing `resolve` and `reject` as parameters.
 ```
 class Promise {
     constructor(method) {
