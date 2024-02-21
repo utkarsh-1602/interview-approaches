@@ -1,4 +1,3 @@
 # What is Callback Hell ?
 
-- When you have lots of callback functions in your code! It gets harder to work with them the more of them you have in your code and it gets particularly bad when you need to do loops, try-catch blocks and things like that.
-
+- Callback Hell is essentially nested callbacks stacked below one another forming a pyramid structure. Every callback depends/waits for the previous callback, thereby making a pyramid structure that affects the readability and maintainability of the code.
