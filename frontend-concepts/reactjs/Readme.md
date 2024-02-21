@@ -10,6 +10,7 @@ Refer: https://blog.webdevsimplified.com/2022-07/react-folder-structure/
 ## Important Concepts of Reactjs you should know as a frontend Developer 
 > (Every Concept Consists of Real world Scenario usecase of it)
 
+
 **Components and props**: 
 - Components are the building blocks of a React application. They are like reusable pieces of code that represent different parts of a user interface.
 - props allow data to be passed from a parent component to a child component.
@@ -25,36 +26,6 @@ Refer: https://blog.webdevsimplified.com/2022-07/react-folder-structure/
         );
         };
     
-
-**State and Lifecycle**:
-- State is used to manage data within a component.
-- Lifecycle methods allow you to perform actions at different stages of a component's existence.
-- Example: In a real-time chat application, you might use state to manage the list of messages. The componentDidMount lifecycle method could be used to fetch initial messages when the component mounts.
-
-
-        class ShoppingCart extends Component {
-        constructor(props) {
-            super(props);
-            this.state = {
-            items: [],
-            };
-        }
-
-        componentDidMount() {
-            // Fetch shopping cart items from an API
-            // Update state with fetched items
-        }
-
-        render() {
-            return (
-            <div>
-                <h2>Your Shopping Cart</h2>
-                {/* Display shopping cart items */}
-            </div>
-            );
-        }
-        }
-
 
 **JSX (Javascript XML)**:
 - JSX is a syntax extension for JavaScript recommended by React. It looks similar to XML or HTML, making it easier to write React components.
@@ -220,49 +191,6 @@ Example: In an e-commerce app, you might conditionally render a "Buy Now" button
 
         return <p>Current Theme: {theme}</p>;
         };
-
-
-
-
-**Context API**:
-- The Context API is a feature in React that provides a way to share values, such as state or functions, between components without having to pass them through the intermediate components in the component tree. It's designed to solve the problem of "prop drilling," where you pass props through multiple levels of components that don't need the data directly but are required to relay it to deeper components.
-
-- Context consists of two main parts: the Provider and the Consumer. The Provider is responsible for making the value available to the components that need it, and the Consumer is used to consume that value.
-
-- Example: Storing user authentication status in a context so that any component in the app can access whether the user is logged in or not.
-
-
-        import React, { createContext, useContext, useState } from 'react';
-
-        const ThemeContext = createContext();
-
-        const ThemeProvider = ({ children }) => {
-        const [theme, setTheme] = useState('light');
-
-        const toggleTheme = () => {
-            setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
-        };
-
-        return (
-            <ThemeContext.Provider value={{ theme, toggleTheme }}>
-            {children}
-            </ThemeContext.Provider>
-        );
-        };
-
-        const ThemedComponent = () => {
-        const { theme, toggleTheme } = useContext(ThemeContext);
-
-        return (
-            <div>
-            <p>Current Theme: {theme}</p>
-            <button onClick={toggleTheme}>Toggle Theme</button>
-            </div>
-        );
-        };
-
-        export { ThemeProvider, ThemedComponent };
-
 
 
 **Router and Navigation**:
