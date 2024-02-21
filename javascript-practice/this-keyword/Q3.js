@@ -6,7 +6,7 @@
 
 // So, when "getDetails" is called, the value of "this" inside the arrow function remains empty or undefined because it's not bound to any specific object.
 
-let user = {
+let user3 = {
     name: "utkarsh",
     age: 21,
     getDetails: () => {
@@ -14,5 +14,5 @@ let user = {
     }
 }
 
-user.getDetails()
+user3.getDetails()
 

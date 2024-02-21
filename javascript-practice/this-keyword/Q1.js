@@ -1,6 +1,6 @@
  // this is pointing to user object
 
-let user = {
+let user1 = {
     name: "utkarsh",
     age: 21,
     getDetails() {
@@ -8,4 +8,4 @@ let user = {
     }
 }
 
-user.getDetails()
+user1.getDetails()

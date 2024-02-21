@@ -1,6 +1,6 @@
 // here this is pointing to childObj, so if we try to print the object value outside the childObj, then it will be returned undefined
 
-let user = {
+let user2 = {
     name: "utkarsh",
     age: 21,
     childObj : {
@@ -11,4 +11,4 @@ let user = {
     }
 }
 
-user.childObj.getDetails()
+user2.childObj.getDetails()

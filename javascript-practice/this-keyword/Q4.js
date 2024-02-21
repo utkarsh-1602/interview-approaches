@@ -2,7 +2,7 @@
 // Regular function expressions in JavaScript do have their own "this" context, and the value of "this" inside them is determined by how the function is called.
 // When "getDetails" is invoked as a method of the "user" object (as it is in this case), the value of "this" inside "getDetails" refers to the "user" object itself. Therefore, when the inner function "x" is called inside "getDetails", it also captures and inherits the same "this" value from its surrounding lexical context, which is the "user" object.
 
-let user = {
+let user4 = {
     name: "utkarsh",
     age: 21,
     getDetails(){
@@ -13,5 +13,5 @@ let user = {
     }
 }
 
-user.getDetails()
+user4.getDetails()
 
