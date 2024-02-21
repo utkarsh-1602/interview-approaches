@@ -1,7 +1,18 @@
 # Promises
 
 ### What are Promises ? 
-- A promise in JavaScript is an object representing the eventual completion or failure of an asynchronous operation. Notice in your constructor you are expecting a method to be passed that you call immediately passing `resolve` and `reject` as parameters.
+- In JavaScript, promises are a mechanism for handling asynchronous operations.
+- You can create a new promise using the Promise constructor. The constructor takes a function as an argument, which in turn takes two parameters: resolve and reject. Inside this function, you perform the asynchronous operation, and when it's completed, you call either resolve to indicate success or reject to indicate failure.
+- Once a promise is created, you can use the .then() and .catch() methods to handle the result or error respectively.
+
+Promises can be in one of three states:
+1. Pending: Initial state, neither fulfilled nor rejected.
+2. Fulfilled: The operation completed successfully.
+3. Rejected: The operation failed.
+
+- `Promise.all()`:  Takes an array of promises and returns a single promise that resolves when all of the input promises have resolved, or rejects with the reason of the first promise that rejects.
+- `The Promise.race()` method returns a Promise from a list of promises, when the faster promise settles.
+
 ```
 class Promise {
     constructor(method) {

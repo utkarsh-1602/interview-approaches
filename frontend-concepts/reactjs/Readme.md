@@ -4,8 +4,8 @@
 Refer: https://blog.webdevsimplified.com/2022-07/react-folder-structure/
 
 ## What is Reactjs ? 
-- React is a free and open-source front-end JavaScript library for building user interfaces based on components. It is maintained by Meta and a community of individual developers and companies. React can be used to develop single-page, mobile, or server-rendered applications with frameworks like Next.js.
-- ReactJS's primary goal is to create User Interfaces (UI) which enhance the speed of programs. It makes use of virtual DOM (JavaScript object), which enhances the app's efficiency. Quicker than the standard DOM is the JavaScript virtual DOM.
+- React is a free and open-source front-end JavaScript library for building user interfaces based on components. 
+- ReactJS's primary goal is to create User Interfaces (UI) which enhance the speed of programs. It makes use of virtual DOM (JavaScript object), which enhances the app's efficiency. 
 
 ## Important Concepts of Reactjs you should know as a frontend Developer 
 > (Every Concept Consists of Real world Scenario usecase of it)
@@ -14,7 +14,7 @@ Refer: https://blog.webdevsimplified.com/2022-07/react-folder-structure/
 The DOM (Document Object Model) is a programming interface for web documents. It represents the structure of HTML (or XML) documents as a tree-like model, where each node represents a part of the document, such as elements, attributes, and text.
 
 ### What is Virtual DOM ?
-- The Virtual DOM is a lightweight copy of the Real DOM, maintained by libraries like React.js. It's a JavaScript representation of the actual DOM.
+- It is JavaScript representation of the real DOM.
 - When changes are made to the data or state of a web application, React re-renders the components affected by those changes.
 - Instead of directly manipulating the Real DOM for every change, React first updates the Virtual DOM.
 - React then compares the updated Virtual DOM with the previous version to determine the minimal set of changes needed to update the Real DOM.
@@ -33,12 +33,26 @@ const element = <h1>Hello, world!</h1>;
 ```
 
 **React Components**:
-- React components are reusable, self-contained units of code that encapsulate a piece of UI.
-- They are typically created by extending React.Component class or by using functional components.
+- Components are the building blocks of a React application. They are like reusable pieces of code that represent different parts of a user interface.
+- There are two types - Class Components and Functional Components.
 Components can accept inputs called props and return React elements describing what should appear on the screen.
 - React components are like little packages of code that you can use to build your website or app.
 - Components can also have state, which allows them to manage dynamic data and respond to user interactions.
 
+
+### What is difference between Class Components and Functional Components ? 
+
+1. **Syntax:**
+- Functional components are just JavaScript functions that accept props as arguments and return React elements.
+- Class components are JavaScript classes that extend from React.Component and have a render method to return React elements.
+
+2. **State Management**:
+- Prior to React 16.8, functional components were stateless and could not hold their own state. With the introduction of Hooks, functional components can now use state and other React features through hooks like useState, useEffect, etc.
+- Class components can hold their own state using this.state and can modify that state using this.setState(). They can also use lifecycle methods like componentDidMount, componentDidUpdate, etc., for managing side effects and component lifecycle.
+
+3. **Lifecycle Methods**:
+- Functional components cannot directly use lifecycle methods. However, with the introduction of Hooks, some of the lifecycle functionality can be achieved using useEffect and other hooks.
+- Class components have access to lifecycle methods such as componentDidMount, componentDidUpdate, componentWillUnmount, etc., which allow developers to perform actions at specific points in the component's lifecycle.
 
 ### Component Lifecycle:
 - In React, the component lifecycle refers to the series of stages that a React component goes through from its initialization to its removal from the DOM (Document Object Model). 
@@ -96,6 +110,10 @@ React 16.3 introduced some changes to the lifecycle methods and added some new m
         );
         };
     
+
+### Children Props
+- In React, the children prop is a special prop that can be passed to a component to render any content that is nested within the component's opening and closing tags.
+- "children props" in React refer to the props that are passed from a parent component to its child component, enabling communication and data flow between them.
 
 ### JSX (Javascript XML):
 - JSX is a syntax extension for JavaScript recommended by React. It looks similar to XML or HTML, making it easier to write React components.
@@ -211,7 +229,7 @@ Example: In an e-commerce app, you might conditionally render a "Buy Now" button
 
 
 ### React Hooks:
-- Hooks provide a more concise and readable way to handle state, side effects, and other React features.
+- React Hooks were introduced in React 16.8 that allows functional components to manage state, lifecycle, and other React features without needing to write a class component. They provide a more concise and readable way to handle stateful logic within functional components.
 
 - example 1: `useState()` Allows functional components to manage local state.
 
@@ -299,7 +317,6 @@ Example: In an e-commerce app, you might conditionally render a "Buy Now" button
 
 
 ### Redux (State Management):
-- Redux is a predictable state container for JavaScript applications, commonly used with React to manage the state of an application in a more organized and centralized manner. It follows the principles of Flux architecture and provides a unidirectional data flow.
 - Detailed Information : https://github.com/utkarsh-1602/redux-shopdecor-app/issues/3
 - Example: Using Redux to manage the state of a shopping cart in an e-commerce app, ensuring consistency across different components.
 
@@ -348,7 +365,7 @@ Example: In an e-commerce app, you might conditionally render a "Buy Now" button
 
 
 ### High Order Components (HOC): 
-- Reuse component logic by wrapping components.
+- A High order component takes another component as input and returns a new component with additional functionalities.
 - Example: An E-commerce platform where we are displaying product Information with `ProductDetails` Component. We are adding `loading` state, while the product data is being fetched. Then we are conditionally displaying a `save to Wishlist` button based on user authentication.
 
     `ProductDetails.js`
