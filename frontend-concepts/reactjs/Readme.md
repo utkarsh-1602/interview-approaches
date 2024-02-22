@@ -8,7 +8,6 @@ Refer: https://blog.webdevsimplified.com/2022-07/react-folder-structure/
 - ReactJS's primary goal is to create User Interfaces (UI) which enhance the speed of programs. It makes use of virtual DOM (JavaScript object), which enhances the app's efficiency. 
 
 ## Important Concepts of Reactjs you should know as a frontend Developer 
-> (Every Concept Consists of Real world Scenario usecase of it)
 
 ### What is DOM ?
 The DOM (Document Object Model) is a programming interface for web documents. It represents the structure of HTML (or XML) documents as a tree-like model, where each node represents a part of the document, such as elements, attributes, and text.
