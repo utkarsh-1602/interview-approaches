@@ -17,6 +17,7 @@
 
 ### Variable hoisting with var
 
+- In JavaScript, when you declare a variable globally using var, it becomes a property of the global object (window in browsers).
 - When a variable is declared with the var keyword, the JavaScript interpreter still hoists its declaration.
 - for example, When the variable a is hoisted, the JavaScript engine still moves it to the top of its scope – but it initializes the variable with a value of `undefined`. As such, until `a` is actually declared on the next line, its actual value won’t be assigned. Then, after declaration, we can finally log its value to the console: “a“.
 
