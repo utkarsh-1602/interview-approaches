@@ -4,7 +4,7 @@
 
 ## Implicit Binding 
 - Implicit binding occurs when a function is called with a context (an object), and the this keyword inside that function refers to the context object.
-- It is called "implicit" because the binding is implicit based on how the function is called.
+- It is called "implicit" (implied though not directly expressed) because the binding is implicit based on how the function is called.
 - This is typically the most common way this is determined in JavaScript.
 
 **example**: 
