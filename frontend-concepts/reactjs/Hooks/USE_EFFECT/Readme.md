@@ -3,6 +3,22 @@
 - the useEffect() hook in React is a function that allows you to perform side effects in functional components. Side effects can include data fetching, setting up subscriptions, or manually changing the DOM.
 - You use useEffect() to tell React that your component needs to do something after it renders. It runs after every render, by default, but you can also control when it runs by passing a dependency array.
 
+## cleanup function 
+- In React, a cleanup function refers to a function that is used to perform cleanup or teardown tasks when a component is unmounted or when certain conditions change. Cleanup functions are commonly associated with effects in functional components, particularly when using the `useEffect` hook.
+- When you use useEffect to perform side effects in a functional component, you may need to clean up those side effects to prevent memory leaks or to ensure that resources are properly released when the component is removed from the DOM. This is where cleanup functions come into play.
+
+```javascript
+useEffect(() => {
+
+// this is a cleanup function
+  return () => {
+  }
+  
+}, [])
+
+```
+
+
 ## Usecase of useEffect() with a scenario in a MERN stack Project
 
 ## Scenario 1
