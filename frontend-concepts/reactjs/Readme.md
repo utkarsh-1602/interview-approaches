@@ -7,7 +7,84 @@ Refer: https://blog.webdevsimplified.com/2022-07/react-folder-structure/
 - React is a free and open-source front-end JavaScript library for building user interfaces based on components. 
 - ReactJS's primary goal is to create User Interfaces (UI) which enhance the speed of programs. It makes use of virtual DOM (JavaScript object), which enhances the app's efficiency. 
 
+
+
 ## Important Concepts of Reactjs you should know as a frontend Developer 
+
+### Why should we use React ?
+- React uses a virtual DOM
+- React utilizes a component-based architecture, allowing developers to break down the UI into reusable, self-contained components.
+- React introduces JSX, which is a syntax extension that allows developers to write HTML-like code within JavaScript
+- React has a vast and active community, along with a rich ecosystem of tools, libraries, and frameworks that enhance development productivity and provide solutions for various needs, such as state management.
+
+### What is Reconciliation ? 
+- Reconciliation in React refers to the process by which React updates the DOM in response to changes in the component's state or props. When a component's state or props change, React needs to determine how to efficiently update the UI to reflect these changes. Reconciliation is the algorithm and mechanism that React uses to perform this task.
+- During the reconciliation process, React invokes various lifecycle hooks such as `componentDidUpdate()` to notify components of the changes. This allows components to perform additional logic or side effects after the DOM has been updated.
+
+### What is React Fiber ?
+- React Fiber is a new reconciliation algorithm that helps React decide what changes to make to the virtual DOM.
+
+### SSR vs CSR 
+ In CSR the web page is created on the user's device using JavaScript, while in SSR the web page is created on the server and then sent to the client as a HTML code.
+
+### Routing (RBAC)
+- RBAC is Role base access control
+- Routing in React refers to the process of managing different views or pages within a single-page application (SPA). **React Router** is the most popular library used for routing in React applications. It allows you to define routes, map them to specific components, and handle navigation within your application.
+
+### How do you manage Protected routes ? 
+- In React applications, protected routes are routes that should only be accessible by authenticated users. You can manage protected routes using React Router by implementing a higher-order component (HOC) or a custom route component that checks if the user is authenticated before rendering the protected component.
+
+`ProtectedRoute.js`
+
+```javascript
+import React, { useContext } from 'react';
+import { Route, Redirect } from 'react-router-dom';
+import { AuthContext } from './AuthContext'; // Assuming you have an AuthContext
+
+const ProtectedRoute = ({ component: Component, ...rest }) => {
+  const { isAuthenticated } = useContext(AuthContext); // Get authentication state from context
+
+  return (
+    <Route
+      {...rest}
+      render={(props) =>
+        isAuthenticated ? <Component {...props} /> : <Redirect to="/login" />
+      }
+    />
+  );
+};
+
+export default ProtectedRoute;
+
+```
+
+`App.js`
+```javascript
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './Home';
+import About from './About';
+import Contact from './Contact';
+import NotFound from './NotFound';
+
+function App() {
+  return (
+    <Router>
+      <div>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
+          <Route component={NotFound} />
+        </Switch>
+      </div>
+    </Router>
+  );
+}
+
+export default App;
+```
+
 
 ### What is DOM ?
 The DOM (Document Object Model) is a programming interface for web documents. It represents the structure of HTML (or XML) documents as a tree-like model, where each node represents a part of the document, such as elements, attributes, and text.
