@@ -31,6 +31,9 @@ Refer: https://blog.webdevsimplified.com/2022-07/react-folder-structure/
 - RBAC is Role base access control
 - Routing in React refers to the process of managing different views or pages within a single-page application (SPA). **React Router** is the most popular library used for routing in React applications. It allows you to define routes, map them to specific components, and handle navigation within your application.
 
+### Why you are building HOC ? 
+- because it is Readable, Reusable, Modular, and Testable.
+
 ### How do you manage Protected routes ? 
 - In React applications, protected routes are routes that should only be accessible by authenticated users. You can manage protected routes using React Router by implementing a higher-order component (HOC) or a custom route component that checks if the user is authenticated before rendering the protected component.
 
