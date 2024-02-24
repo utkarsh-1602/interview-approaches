@@ -29,4 +29,7 @@
 - the worker threads in the thread pool handle the actual execution of blocking operations, allowing the main event loop to remain responsive to incoming requests and events. This architecture is designed to leverage multi-core CPUs effectively and improve the scalability of Node.js applications.
 - Once the blocking operation in the thread pool is completed, its result is sent back to the main Event Loop through callbacks or other mechanisms and that result is sent as a response back to the Client.
 
+- Threads are limited, **By Default you have 4 threads/workers available**. 
+-so suppose you have 5 synchronous operations, and nodesjs delegates it to one of the thread for each, then after the limit is reached, which was 4, then the 5th task have to wait to be executed till one of the 4 threads are free. so for example if you have 100's of sync tasks, then to execute them, it will take forever, so that's why its not recommended to use synchronous operations. 
+
 ![Nodejs Architecture Workflow](nodejs-architecture-workflow.png)
