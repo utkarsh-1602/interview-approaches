@@ -26,6 +26,7 @@
 - The thread pool consists of worker threads that handle these blocking operations independently of the Event Loop.
 - When a blocking operation is encountered, Node.js delegates it to one of the threads in the pool, allowing the main Event Loop to continue processing other tasks
 - While the blocking operation is being processed in the thread pool, the Event Loop remains active and responsive. It can continue handling other asynchronous tasks, such as I/O polling or executing callbacks for completed asynchronous operations.
+- the worker threads in the thread pool handle the actual execution of blocking operations, allowing the main event loop to remain responsive to incoming requests and events. This architecture is designed to leverage multi-core CPUs effectively and improve the scalability of Node.js applications.
 - Once the blocking operation in the thread pool is completed, its result is sent back to the main Event Loop through callbacks or other mechanisms and that result is sent as a response back to the Client.
 
 ![Nodejs Architecture Workflow](nodejs-architecture-workflow.png)
