@@ -5,7 +5,18 @@ const myServer = http.createServer((req, res) => {
     const ipAddress = req.socket.remoteAddress;
     const log = `${Date.now()}: New request received from ${ipAddress} ${req.url}\n`;
     fs.appendFile('log.txt', log, () => {
-        res.end('Hello from server')
+
+        switch(req.url){
+            case '/':
+                res.end('Homepage')
+                break
+            case '/about':
+                res.end('About page')
+                break
+            default:
+                res.end('404 Not Found')
+        }
+
     })
 })
 
