@@ -32,4 +32,9 @@
 - Threads are limited, **By Default you have 4 threads/workers available**. 
 -so suppose you have 5 synchronous operations, and nodesjs delegates it to one of the thread for each, then after the limit is reached, which was 4, then the 5th task have to wait to be executed till one of the 4 threads are free. so for example if you have 100's of sync tasks, then to execute them, it will take forever, so that's why its not recommended to use synchronous operations. 
 
+## Can we increase the size of thread pool? 
+- Yes, in Node.js, you can increase the size of the thread pool by adjusting the `UV_THREADPOOL_SIZE` environment variable. The thread pool is primarily used for handling certain types of asynchronous I/O operations and other tasks in the background.
+- By default, Node.js sets the thread pool size based on the number of CPUs available on your system. However, if your application requires more threads to handle concurrent I/O operations efficiently, you can increase this size.
+
+
 ![Nodejs Architecture Workflow](nodejs-architecture-workflow.png)
