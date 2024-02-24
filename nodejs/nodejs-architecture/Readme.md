@@ -17,13 +17,15 @@
 
 ## Workflow of Node.js Architecture
 - Clients send requests to the webserver to interact with the web application. Requests can be non-blocking or blocking:
-    1. Querying for data
-    2. Deleting data 
-    3. Updating the data
-
 - Node.js retrieves the incoming requests and adds those requests to the Event Queue.
 - The requests are then passed one-by-one through the Event Loop. It checks if the requests are simple enough to not require any external resources
-- Event Loop processes simple requests (non-blocking operations), such as I/O Polling, and returns the responses to the corresponding clients
-- A single thread from the Thread Pool is assigned to a single complex request. This thread is responsible for completing a particular blocking request by accessing the external resources, such as compute, database, file system, etc.
-- Once, the task is carried out completely, the response is sent to the Event Loop that in turn sends that response back to the Client
+- Event Loop processes simple requests (non-blocking operations/async tasks), such as I/O Polling, and returns the responses to the corresponding clients.
+- In Node.js, blocking operations can significantly hinder the performance of your application because they prevent the event loop from handling other tasks while they are being executed. 
+- Blocking operations in Node.js typically occur when synchronous functions are used to perform tasks such as heavy computation, synchronous file I/O, or long-running operations. For example, if you use fs.readFileSync() instead of fs.readFile() for reading a file, it will block the event loop until the file is read completely.
+- Node.js maintains a thread pool (which is part of the underlying libuv library). This thread pool is used to execute blocking operations asynchronously without blocking the Event Loop.
+- The thread pool consists of worker threads that handle these blocking operations independently of the Event Loop.
+- When a blocking operation is encountered, Node.js delegates it to one of the threads in the pool, allowing the main Event Loop to continue processing other tasks
+- While the blocking operation is being processed in the thread pool, the Event Loop remains active and responsive. It can continue handling other asynchronous tasks, such as I/O polling or executing callbacks for completed asynchronous operations.
+- Once the blocking operation in the thread pool is completed, its result is sent back to the main Event Loop through callbacks or other mechanisms and that result is sent as a response back to the Client.
 
+![Nodejs Architecture Workflow](nodejs-architecture-workflow.png)
