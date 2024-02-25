@@ -6,6 +6,7 @@ const urlRoute = require('./routes/url')
 
 connectToMongoDB('mongodb://127.0.0.1:27017/shorturl')
 
+app.use(express.json())
 app.use('/url', urlRoute);
 
 app.listen(PORT, () => {
