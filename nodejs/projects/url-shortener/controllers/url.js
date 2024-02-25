@@ -46,3 +46,16 @@ exports.handleRedirectUrl = async(req, res) => {
         
     }
 }
+
+exports.handleGetAnalytics = async(req, res) => {
+    try {
+
+        const shortId = req.params.shortId;
+        const result = await URL.findOne({shortId});
+
+        return res.status(201).json({totalClicks: result.visitHistory.length, analytics: result.visitHistory})
+        
+    } catch (error) {
+        console.log("Error getting Analytics: ", error)
+    }
+}
