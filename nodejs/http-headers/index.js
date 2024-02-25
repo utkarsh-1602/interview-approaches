@@ -37,6 +37,9 @@ app.get('/users', (req, res) => {
         ${users.map(user => `<li>${user.first_name}</li>`).join('')}
         </ul>
     `
+    console.log(req.headers)
+    res.setHeader('X-myName', 'utkarsh hadgekar') // custom header
+    // best practices: always add X to custom header
     res.send(html)
 })
 app.get('/api/users', (req, res) => {
@@ -56,7 +59,7 @@ app.post('/api/users', (req, res) => {
     console.log("Body: " + body);
     users.push({id: users.length + 1, ...body})
     fs.writeFile('./MOCK_DATA.json', JSON.stringify(users), (err, data) => {
-        return res.status(201).json({status: "new user added", id: users.length})
+        return res.json({status: "new user added", id: users.length})
     })
 })
 

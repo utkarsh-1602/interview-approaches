@@ -5,10 +5,10 @@
 - Start MongoDB Server : `mongod` 
 - Initialize the MongoDB Shell Environment and Connect to MongoDB Instance: `mongosh`
 
-### mongod 
+### `mongod` 
 The mongod command is the primary daemon process for the MongoDB database. It's responsible for handling data requests, managing data access, and performing various administrative functions within MongoDB.
 
-### mongosh
+### `mongosh`
 mongosh is the official MongoDB Shell, a command-line interface and JavaScript interpreter for MongoDB. It allows users to interact with MongoDB databases and collections using a JavaScript-based interface.
 
 ### Show Databases 
