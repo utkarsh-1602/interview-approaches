@@ -12,6 +12,9 @@
 </head>
 <body>
     <h1>Url Shortener</h1>
+    <% if (locals.id) { %>
+     <p>URL Generated: http://localhost:8000/url/<%= id %></p>
+    <% } %>
     <div>
         <!-- method is used for the type of http request to be made -->
         <!-- action shows to which route the http request to be made  -->
@@ -20,6 +23,29 @@
             <input type="text" name="url" placeholder="https://example.com">
             <button type="submit">Generate</button>
         </form>
+    </div>
+    <div>
+        <h1>Your Urls</h1> 
+        <% if (locals.allurls) { %>
+            <table>
+                <thead>
+                    <th>S. No</th>
+                    <th>ShortId</th>
+                    <th>Redirect</th>
+                    <th>Clicks</th>
+                </thead>
+                <tbody>
+                    <% allurls.forEach((url, index) => { %>
+                        <tr>
+                        <td><%= index + 1 %></td>
+                        <td><%= url.shortId %></td>
+                        <td><%= url.redirectUrl %></td>
+                        <td><%= url.visitHistory.length %></td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        <% } %>
     </div>
 </body>
 </html>
