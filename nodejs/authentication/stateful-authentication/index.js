@@ -1,3 +1,5 @@
+// stateful authentication
+// setup allows you to maintain the state of user authentication across multiple requests by using sessions and cookies.
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -12,7 +14,7 @@ const {connectToMongoDB} = require('./db/dbConnection')
 const userRoute = require('./routes/user')
 const urlRoute = require('./routes/url');
 const staticRoute = require('./routes/staticRouter')
-const {restrictToLoggedInUserOnly} = require('./middleware/auth')
+const {restrictToLoggedInUserOnly, checkAuth} = require('./middleware/auth')
 
 connectToMongoDB('mongodb://127.0.0.1:27017/shorturl')
 // middleware
@@ -22,7 +24,7 @@ app.use(cookieParser())
 
 app.use('/user', userRoute)
 app.use('/url', restrictToLoggedInUserOnly, urlRoute);
-app.use('/', staticRoute)
+app.use('/', checkAuth, staticRoute)
 
 app.listen(PORT, () => {
     console.log('Server Started on port: ' + PORT);

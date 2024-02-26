@@ -19,3 +19,8 @@ here's how you can do.....
 There are multiple ways to transfer uid : 
 
 ![Transfer the UID](transfer_uid.png)
+
+
+## Stateless Authentication
+- In stateless authentication, the server doesn’t store any session information about the user. Instead, each request that the user makes to the server contains all the necessary information for authentication, typically in the form of a JWT. The server then validates the token and responds accordingly.
+- Stateless authentication is popular in modern web applications because it is scalable and can be used with the microservices architecture.

@@ -16,7 +16,11 @@ const urlSchema = mongoose.Schema({
                 type: Number
             }
         }
-    ]
+    ],
+    createdBy: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "users"
+    }
 },
 {timestamps: true}
 );

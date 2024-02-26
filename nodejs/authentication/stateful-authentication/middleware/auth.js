@@ -18,3 +18,12 @@ exports.restrictToLoggedInUserOnly = async(req, res, next) => {
     req.user = user;
     next();
 }
+
+exports.checkAuth = async(req, res, next) => {
+
+    const userUid = req.cookies.myCookie;
+    console.log(req)
+    const user = getUser(userUid);
+    req.user = user;
+    next();
+}
