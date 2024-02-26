@@ -12,6 +12,7 @@ const {connectToMongoDB} = require('./db/dbConnection')
 const userRoute = require('./routes/user')
 const urlRoute = require('./routes/url');
 const staticRoute = require('./routes/staticRouter')
+const {restrictToLoggedInUserOnly} = require('./middleware/auth')
 
 connectToMongoDB('mongodb://127.0.0.1:27017/shorturl')
 // middleware
@@ -20,7 +21,7 @@ app.use(express.urlencoded({ extended: false})); // to parse the form data prese
 app.use(cookieParser())
 
 app.use('/user', userRoute)
-app.use('/url', urlRoute);
+app.use('/url', restrictToLoggedInUserOnly, urlRoute);
 app.use('/', staticRoute)
 
 app.listen(PORT, () => {
