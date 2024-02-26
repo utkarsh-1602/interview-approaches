@@ -17,7 +17,7 @@ exports.handleGenerateShortUrl = async(req, res) => {
             visitedHistory: []
         });
 
-        return res.status(201).json({id: shortId})
+        return res.status(201).render('home', {id: shortId})
 
     } catch (error) {
         console.log("Error: " + error)

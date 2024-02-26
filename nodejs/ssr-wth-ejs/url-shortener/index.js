@@ -14,7 +14,7 @@ const staticRoute = require('./routes/staticRouter')
 connectToMongoDB('mongodb://127.0.0.1:27017/shorturl')
 // middleware
 app.use(express.json())
-app.use(express.urlencoded({ extended: true})); // to parse the form data present in home.ejs
+app.use(express.urlencoded({ extended: false})); // to parse the form data present in home.ejs
 
 app.use('/url', urlRoute);
 app.use('/', staticRoute)
