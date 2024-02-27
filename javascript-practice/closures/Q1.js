@@ -9,6 +9,5 @@ function outerFunction() {
 }
 
 let closure = outerFunction();
-closure();
-
+closure()
 

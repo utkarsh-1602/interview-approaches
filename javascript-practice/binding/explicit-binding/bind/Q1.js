@@ -8,3 +8,4 @@ function myFun(job, location){
 
 const x = myFun.bind(user)
 x('software developer', 'india')
+x('entreprenuer', 'usa')

@@ -4,7 +4,8 @@ function makeFunction(){
     function displayName(num){
         console.log(name, num);
     }
-    return displayName; 
+    
+    return displayName;
 }
 
 makeFunction()(5)
