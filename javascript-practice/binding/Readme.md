@@ -3,7 +3,7 @@
 - In JavaScript, implicit and explicit binding are concepts related to how the `this` keyword is determined within a function. The value of `this` is not statically defined in JavaScript; rather, it is determined dynamically based on how a function is invoked.
 
 ## Implicit Binding 
-- Implicit binding occurs when a function is called with a context (an object), and the this keyword inside that function refers to the context object.
+- Implicit binding occurs when a function is called within an an object, and the this keyword inside that function refers to the that object.
 - It is called "implicit" (implied though not directly expressed) because the binding is implicit based on how the function is called.
 - This is typically the most common way this is determined in JavaScript.
 

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Delegation Example</title>
+</head>
+<body>
+
+<ul id="parent-list">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+  <li>Item 4</li>
+  <li>Item 5</li>
+</ul>
+
+<script>
+document.getElementById('parent-list').addEventListener('click', function(event) {
+  if (event.target.tagName === 'LI') {
+    console.log('You clicked on:', event.target.textContent);
+  }
+});
+</script>
+
+</body>
+</html>

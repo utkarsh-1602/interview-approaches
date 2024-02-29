@@ -1,4 +1,5 @@
 # REST API 
+- REST Stands for (Representational State transfer application)
 
 ## What's Difference between req.query and req.params ? 
 - Use `req.query` to access query parameters from the URL.
