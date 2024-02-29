@@ -1,10 +1,11 @@
-# What is async Function ?
-Asynchronous programming is a technique that enables the program to start a long-running task and also be responsive to other events while that task runs, rather than have to wait until that task has finished. Once that task has finished, your program gives the output.
+# What is the purpose of the async and await keywords in JavaScript, and how do they work?
+The async and await keywords in JavaScript are used to handle asynchronous functions and promises.
 
-# What is await Function ?
-Await function is used to wait for the promise. It could be used within the async block only.
-It makes the code wait until the promise returns a result.
+### `async` keyword
+The `async` keyword is used to define asynchronous functions When you use async before a function declaration, it indicates that the function will always return a promise.
 
+### `await` keyword
+The `await` keyword is used inside an async function to wait for a promise to be resolved or reject. It can only be used inside an async function. When you await a promise, the execution of the async function is paused until the promise is settled (either fulfilled or rejected). If the promise is fulfilled, await returns the resolved value; if the promise is rejected, it throws an error that can be caught using a try...catch block.
 
 # Where Async function is being executed? is it in execution stack or callback queue
 
