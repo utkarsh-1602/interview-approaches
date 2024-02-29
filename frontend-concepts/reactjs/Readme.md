@@ -13,7 +13,7 @@ Refer: https://blog.webdevsimplified.com/2022-07/react-folder-structure/
 
 ### Why should we use React ?
 - React uses a virtual DOM
-- React utilizes a component-based architecture, allowing developers to break down the UI into reusable, self-contained components.
+- React utilizes a component-based architecture, so we can reuse the components.
 - React introduces JSX, which is a syntax extension that allows developers to write HTML-like code within JavaScript
 - React has a vast and active community, along with a rich ecosystem of tools, libraries, and frameworks that enhance development productivity and provide solutions for various needs, such as state management.
 
@@ -94,10 +94,8 @@ The DOM (Document Object Model) is a programming interface for web documents. It
 
 ### What is Virtual DOM ?
 - It is JavaScript representation of the real DOM.
-- When changes are made to the data or state of a web application, React re-renders the components affected by those changes.
-- Instead of directly manipulating the Real DOM for every change, React first updates the Virtual DOM.
-- React then compares the updated Virtual DOM with the previous version to determine the minimal set of changes needed to update the Real DOM.
-Finally, React applies only those necessary changes to the Real DOM, resulting in efficient updates.
+- When changes are made to the data or state of a web application, React re-renders the components affected by those changes. Instead of directly manipulating the Real DOM for every change, React first updates the Virtual DOM.
+- In React, when changes are made to the virtual DOM, React compares these changes to the previous version of the virtual DOM. This process is known as **reconciliation**. React's reconciliation algorithm efficiently determines what changes need to be made to the actual DOM in order to reflect the changes made in the virtual DOM.
 
 
 ### What is difference between Elements and Components ? 
@@ -174,21 +172,6 @@ class MyComponent extends React.Component {
 - `componentDidCatch()`: This method is called when there's an error during rendering, in a lifecycle method, or in the constructor of any child component.
 
 React 16.3 introduced some changes to the lifecycle methods and added some new methods like getDerivedStateFromProps() and getSnapshotBeforeUpdate(). Additionally, with the introduction of React Hooks, there's an alternative way to handle component lifecycle and state management using functional components.
-
-### Components and props: 
-- Components are the building blocks of a React application. They are like reusable pieces of code that represent different parts of a user interface.
-- props allow data to be passed from a parent component to a child component.
-- Example: Imagine a blog application where you have a Post component. You pass the post details (title, author, content) as props to the Post component from a parent component.
-    
-        const ProductComponent = (props) => {
-        return (
-            <div>
-            <h2>{props.product.name}</h2>
-            <p>{props.product.description}</p>
-            </div>
-        );
-        };
-    
 
 ### Children Props
 - In React, the children prop is a special prop that can be passed to a component to render any content that is nested within the component's opening and closing tags.
