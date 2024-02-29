@@ -1,7 +1,5 @@
 # Hoisting 
--  In JavaScript, hoisting refers to the built-in behavior of the language through which declarations of functions, variables, and classes are moved to the top of their scope – all before code execution.
-
-- In turn, this allows us to use functions, variables, and classes before they are declared.
+-  Hoisting is a concept where a variable or function is lifted to the top of its global or local scope before the whole code is executed. This makes it possible for such a variable/function to be accessed before initialization.
 
 ### Function Hoisting 
 

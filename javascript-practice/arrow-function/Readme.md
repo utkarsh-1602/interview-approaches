@@ -34,4 +34,7 @@ class Animal {
 ```
 - Arrow functions cannot be used as constructors.
 
-4. 
+4. Acess before Initialization 
+- Arrow functions cannot be accessed before initialization.
+- Regular functions can be accessed before initialization, here concept of hoisting is used. 
+
