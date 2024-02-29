@@ -17,7 +17,7 @@ Promises can be in one of three states:
 
 
 ### Promise.all()
-- `Promise.all()`:  Takes an array of promises and returns a single promise that resolves when all of the input promises have resolved, or rejects with the reason of the first promise that rejects.
+- `Promise.all()`:  Takes an array of promises and returns a single promise that is resolved when all of the input promises have resolved, or rejected when one of the promise rejected.
 
 ```javascript
 Promise.all([promise1, promise2, promise3]).then((values) => {
