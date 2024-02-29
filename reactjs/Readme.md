@@ -177,37 +177,6 @@ React 16.3 introduced some changes to the lifecycle methods and added some new m
 - In React, the children prop is a special prop that can be passed to a component to render any content that is nested within the component's opening and closing tags.
 - "children props" in React refer to the props that are passed from a parent component to its child component, enabling communication and data flow between them.
 
-
-### Controlled component 
-In React, a "controlled component" refers to a form element whose value is controlled by React state. Instead of allowing the form element to maintain its own state internally, the value is controlled by React and updated via state management.
-
-```javascript
-import React, { useState } from 'react';
-
-const ControlledComponent = () => {
-  const [inputValue, setInputValue] = useState('');
-
-  const handleChange = (event) => {
-    setInputValue(event.target.value);
-  };
-
-  return (
-    <div>
-      <h2>Controlled Component</h2>
-      <input
-        type="text"
-        value={inputValue} // value is controlled by React state
-        onChange={handleChange} // onChange updates React state
-      />
-      <p>Input value: {inputValue}</p>
-    </div>
-  );
-};
-
-export default ControlledComponent;
-
-```
-
 ### Lifting State up 
 "Lifting state up" in React refers to the process of moving the state from child components to their parent component. This is often done to share state between multiple components or to ensure that the state is managed in a single location, known as a "single source of truth."
 
