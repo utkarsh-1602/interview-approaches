@@ -16,3 +16,4 @@ function print() {
 
 2. `this` binding 
 - In normal function, this keyword references the objects that call them.
+
