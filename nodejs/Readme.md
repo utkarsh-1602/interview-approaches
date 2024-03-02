@@ -50,6 +50,13 @@ Some common use cases for Node.js include:
 
 Refer: [Nodejs Architecture](nodejs-architecture/Readme.md)
 
+## What is Concurrency in Nodejs ?
+Concurrency is an essential feature of Node. js that enables it to handle large numbers of I/O operations simultaneously, without blocking the execution thread.
+
+## What are I/O Operations ? 
+- I/O is a term used frequently in Node.js to describe network or file activities. Network operations allow you to send data from your application to another.
+These are operations that communicate with stuff from the outside of your application. It means HTTP requests, disk reads and writes or database operations, just to name a few. I/O in Node comes in two “categories”: blocking and non-blocking
+
 ## Being Single Threaded, how Nodejs Handles concurrency ? 
 
 - **Non-blocking I/O**: Node.js uses non-blocking, asynchronous I/O operations for tasks like file I/O, network requests, and database queries. When Node.js initiates an I/O operation, instead of waiting for it to complete, it continues to execute other tasks. Once the I/O operation is finished, a callback function is executed.
