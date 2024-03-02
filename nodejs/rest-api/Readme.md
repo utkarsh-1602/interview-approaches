@@ -1,5 +1,5 @@
 # REST API 
-- REST Stands for (Representational State transfer application)
+- REST Stands for (Representational State transfer) and it is a software architectural style used for design and development of API's
 
 ## What's Difference between req.query and req.params ? 
 - Use `req.query` to access query parameters from the URL.
