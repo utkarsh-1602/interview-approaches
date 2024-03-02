@@ -1,7 +1,8 @@
 # Debouncing 
 refer: https://www.youtube.com/watch?v=kCfTEoeQvQw&list=PLKhlp2qtUcSaCVJEt4ogEFs6I41pNnMU5&index=11
 
-- Debouncing in JavaScript is a technique used to control how often a function is executed in response to some event, typically an event that occurs frequently such as scrolling, resizing, or typing.
+- Debouncing is a technique where the function is only executed after a specific delay since the last event's occurrence.
+- typically it is used for events such as scrolling, resizing, or typing.
 - When you attach an event listener to such an event, the listener function may be called multiple times rapidly, especially if the event is triggered frequently. Debouncing helps in optimizing performance and preventing unnecessary executions of the attached function.
 
 
