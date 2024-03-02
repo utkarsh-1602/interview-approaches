@@ -5,7 +5,7 @@ The async and await keywords in JavaScript are used to handle asynchronous funct
 The `async` keyword is used to define asynchronous functions When you use async before a function declaration, it indicates that the function will always return a promise.
 
 ### `await` keyword
-The `await` keyword is used inside an async function to wait for a promise to be resolved or reject. It can only be used inside an async function. When you await a promise, the execution of the async function is paused until the promise is settled (either fulfilled or rejected). If the promise is fulfilled, await returns the resolved value; if the promise is rejected, it throws an error that can be caught using a try...catch block.
+The `await` keyword is used inside an async function to wait for a promise to be resolved or reject. It can only be used inside an async function. If the promise is fulfilled, await returns the resolved value; if the promise is rejected, it throws an error that can be caught using a try...catch block.
 
 # Where Async function is being executed? is it in execution stack or callback queue
 
