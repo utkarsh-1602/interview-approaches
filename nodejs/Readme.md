@@ -15,7 +15,7 @@
 - Node.js enables developers to use JavaScript for both client-side and server-side programming, which means that they can write JavaScript code for backend server logic as well as frontend web development.
 
 ## What is a Middleware ? 
-In Node.js, middleware refers to functions that have access to the request object (req), the response object (res), and the next function in the application's request-response cycle. Middleware functions can execute any code, modify request and response objects, end the request-response cycle, or call the next middleware in the stack.
+In Node.js, middleware refers to functions that have access to the request object (req), the response object (res), and the next middleware function in the application's request-response cycle. Middleware functions can execute any code, modify request and response objects, end the request-response cycle, or call the next middleware in the stack.
 
 Middleware functions are typically used to perform tasks such as:
 
