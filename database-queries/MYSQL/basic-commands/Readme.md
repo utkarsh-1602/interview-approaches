@@ -68,7 +68,11 @@ SELECT * FROM USERS WHERE NAME = 'SAM';
 
 ```
 
-8. exit Mysql command line 
+### 8. exit Mysql command line 
 ```sql 
 EXIT;
+```
+### Show tables present in the database
+```sql 
+SHOW TABLES;
 ```
