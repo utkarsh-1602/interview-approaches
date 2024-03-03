@@ -1,6 +1,8 @@
 # ALTER TABLE 
 
-1. let's say, you have a `ORDERS` table, where you want to add a new column `age`, here's how you can do that: 
+### Q1
+
+let's say, you have a `ORDERS` table, where you want to add a new column `age`, here's how you can do that: 
 
 **syntax**: 
 ``` sql
