@@ -10,3 +10,7 @@ Reference: https://www.youtube.com/watch?v=b_B1BEShfBc&list=PLinedj3B30sDby4Al-i
 
 ### Features 
 <img src="features.png" width="700" height="500">
+
+## Ngnix Installation on Ubuntu 22.04 
+
+Refer: https://www.redswitches.com/blog/install-nginx-on-ubuntu/#A-Short-Introduction-to-NGINX
