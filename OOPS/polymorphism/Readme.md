@@ -1,5 +1,5 @@
 # Polymorphism
-- Polymorphism is one of the core concepts of object-oriented programming languages where poly means many and morphism means transforming one form into another. 
+- Polymorphism is an object-oriented programming concept that refers to the ability of a variable, function, or object to take on multiple forms
 
 -  Polymorphism allows us to perform a single action in different ways. In other words, polymorphism allows you to define one interface and have multiple implementations
 

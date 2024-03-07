@@ -1,6 +1,7 @@
 # Encapsulation 
 
-- Encapsulation is a fundamental concept in object-oriented programming that refers to the practice of hiding the internal details of an object and exposing only the necessary information to the outside world. Encapsulation helps in maintaining the integrity of data and ensures that it is not accessed or modified inappropriately. 
+- Encapsulation is a fundamental concept in object-oriented programming that refers to the practice of hiding the internal details of an object and exposing only the necessary information to the outside world.
+- Encapsulation is a way to restrict the direct access to some components of an object.
 
 ## Encapsulation in JavaScript: 
 In JavaScript, encapsulation can be achieved using two techniques: using **closures** and using **classes**. 
