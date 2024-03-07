@@ -10,7 +10,7 @@ This section is divided into two parts.
 - It provides a way to interact with databases, so that users can perform various operations such as querying data, inserting new records, updating existing records, and deleting records.
 - We use SQL for various purposes, such as Data Querying, Data Management, Data Manipulation, Database Security, Data aggregation, and interacting with applications. 
 
-## What are different types of SQL Commands ? 
+## What are different types of SQL Sublanguages ? 
 SQL commands can be broadly categorized into several types based on their functionality, these are some main types: 
 
 1. DQL (Data Query Language): DQL comprises SQL commands used to retrieve specific data from one or more tables in a database.
