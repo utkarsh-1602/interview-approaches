@@ -299,7 +299,7 @@ Example: In an e-commerce app, you might conditionally render a "Buy Now" button
         };
 
 
-### Forms and Controlled Components:
+### Forms:
 - Manage form input state using React state.
 - Example: Building a user registration form where the input values are controlled by React state, allowing you to validate and submit the form.
 
