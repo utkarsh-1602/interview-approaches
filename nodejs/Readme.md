@@ -1,10 +1,8 @@
 # Important Resources 
 
-### To generate test Json Data for API Testing 
-- Mockaroo : https://www.mockaroo.com/
+### To generate test Json Data for API Testing: <a href="https://www.mockaroo.com/" target="_blank">Mockaroo</a>
 
-### To verify our encoded JWT Token 
-- JWT.io : https://jwt.io/
+### To Generate and Verify JWT Token: <a href="https://jwt.io/" target="_blank">JWT.io</a>
 
 
 # Node js
