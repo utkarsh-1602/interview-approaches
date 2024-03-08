@@ -14,4 +14,3 @@
 
 --------
 
-## Don't forget, Event Loop is Running Continuously !
