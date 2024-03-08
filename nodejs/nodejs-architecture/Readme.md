@@ -16,7 +16,7 @@
 6. External Resources: External resources are required to deal with blocking client requests. These resources can be for computation, data storage, etc.
 
 ## Workflow of Node.js Architecture
-- Clients send requests to the webserver to interact with the web application. Requests can be non-blocking or blocking:
+- Clients send requests to the webserver to interact with the web application. Requests can be non-blocking or blocking.
 - Node.js retrieves the incoming requests and adds those requests to the Event Queue.
 - The requests are then passed one-by-one through the Event Loop. It checks if the requests are simple enough to not require any external resources
 - Event Loop processes simple requests (non-blocking operations/async tasks), such as I/O Polling, and returns the responses to the corresponding clients.

@@ -7,6 +7,9 @@ The `async` keyword is used to define asynchronous functions When you use async 
 ### `await` keyword
 The `await` keyword is used inside an async function to wait for a promise to be resolved or reject. It can only be used inside an async function. If the promise is fulfilled, await returns the resolved value; if the promise is rejected, it throws an error that can be caught using a try...catch block.
 
+### What is Asynchronous Programming 
+Asynchronous programming is a technique that enables your program to start a potentially long-running task and still be able to be responsive to other events while that task runs, rather than having to wait until that task has finished. Once that task has finished, your program is presented with the result.
+
 # Where Async function is being executed? is it in execution stack or callback queue
 
 - all sync JavaScript code is executed in execution stack . all async JavaScript callback function is placed in callback queue . event loop will wait to put callback functions into execution stack from callback queue until when execution stack gets empty.( to get execution stack empty, all of the sync code should be completed its execution).

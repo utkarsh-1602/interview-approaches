@@ -6,6 +6,8 @@
 ### To Generate and Verify JWT Token 
 - JWT.io : https://jwt.io/
 
+### Important Nodejs Articles to read : 
+- Keep the Node.js Event Loop Healthy : https://medium.com/dovetail-engineering/keep-the-node-js-event-loop-healthy-c3cae0e0e0f2
 
 # Node js
 
