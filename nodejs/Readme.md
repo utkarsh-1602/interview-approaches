@@ -103,3 +103,6 @@ By handling all these features, libuv enables Node.js to work as a single-thread
 
 
 Resource : https://codedamn.com/news/nodejs/libuv-architecture
+
+### For what purpose `package.json` is used ? 
+`package. json` file provides a simplified way to manage a project's metadata and dependencies. The file ensures a project always has current information about the libraries and tools it needs to work correctly.
