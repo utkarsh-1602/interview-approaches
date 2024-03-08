@@ -115,3 +115,14 @@ The basic components of an Event-Driven Program are :
 2. An event loop that listens for event triggers and calls the corresponding event handler for that event.
 
 
+### What are the three methods to avoid callback hell?
+The three methods to avoid callback hell are:
+
+1. Using async/await()
+2. Using promises
+3. Using generators
+
+### What is body parser in nodejs ? 
+- In Node.js, body-parser is a middleware that helps to extract data from the body of incoming requests.
+- When your Node.js server receives data from a form submission or an API call, it's often sent in the body of the request. Body-parser makes it easy to access this data and work with it in your code.
+
