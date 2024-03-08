@@ -16,18 +16,6 @@
 
 - Node.js enables developers to use JavaScript for both client-side and server-side programming, which means that they can write JavaScript code for backend server logic as well as frontend web development.
 
-## What is a Middleware ? 
-In Node.js, middleware refers to functions that have access to the request object (req), the response object (res), and the next middleware function in the application's request-response cycle. Middleware functions can execute any code, modify request and response objects, end the request-response cycle, or call the next middleware in the stack.
-
-Middleware functions are typically used to perform tasks such as:
-
-1. Parsing incoming request data: Middleware can parse data from the request body, query parameters, headers, or cookies and make it available to subsequent handlers.
-2. Authentication and authorization: Middleware can check if a user is authenticated and authorized to access certain routes or resources.
-3. Error handling: Middleware can catch errors that occur during the handling of a request and respond with an appropriate error message or status code.
-4. Logging: Middleware can log information about incoming requests, such as the request method, URL, and timestamp.
-5. Compression: Middleware can compress response data to reduce bandwidth usage and improve page load times.
-6. Caching: Middleware can cache responses to reduce the need to regenerate them for subsequent requests.
-7. Middleware functions are added to the Express.js application using the app.use() method and are executed in the order they are added to the application's middleware stack
 
 ## What is a runtime environment ?
 - A runtime environment is where your program will be executed. It determines what global objects your program can access and it can also impact how it runs.
@@ -106,3 +94,24 @@ Resource : https://codedamn.com/news/nodejs/libuv-architecture
 
 ### For what purpose `package.json` is used ? 
 `package. json` file provides a simplified way to manage a project's metadata and dependencies. The file ensures a project always has current information about the libraries and tools it needs to work correctly.
+
+### How does Node.js handle concurrency even after being single-threaded?
+Node.js internally uses libuv library for handling all async call. This library creates multiple thread pools to handle async operations.
+
+### What is control flow in Node.js?
+Control Flow functions are executed whenever there is an async call made in the program. These functions define the order in which these asynchronous functions will be executed.
+
+### What are the main disadvantages of Node.js?
+Since Node.js is single-threaded so multi-threaded engines are better and can handle tasks more efficiently. Also, we do not use relational databases with Node.js like MySQL mostly non-relational databases like MongoDB is used.
+
+### What is REPL in Node.js?
+REPL in Node.js stands for Read, Evaluate, Print, and Loop. It is a computer environment similar to the shell which is useful for writing and debugging code as it executes the code in on go.
+
+### What is Event driven programming in Nodejs?
+Event-driven programming is used to synchronize the occurrence of multiple events and to make the program as simple as possible. 
+
+The basic components of an Event-Driven Program are :
+1. A callback function is called when an event is triggered.
+2. An event loop that listens for event triggers and calls the corresponding event handler for that event.
+
+
