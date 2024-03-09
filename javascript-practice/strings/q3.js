@@ -7,6 +7,7 @@ function findLongestWord(x){
 
     for(let i=0; i<words.length; i++){
         if(words[i].length > longestWord.length){
+            console.log(words[i].length)
             longestWord = words[i]
         }
     }
