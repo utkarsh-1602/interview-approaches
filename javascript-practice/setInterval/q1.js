@@ -7,4 +7,4 @@ function myCallback(a, b) {
   console.log(b);
 }
 
-console.log(intervalID)
+// console.log(intervalID)
