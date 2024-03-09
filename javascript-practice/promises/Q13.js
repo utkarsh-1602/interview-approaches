@@ -6,7 +6,7 @@ function getUsername(username){
 
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(username)
+            reject(username)
         }, 2000)
     })
 
