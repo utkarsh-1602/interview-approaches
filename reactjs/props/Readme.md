@@ -1,6 +1,5 @@
 
 # props
-
 - props allow data to be passed from a parent component to a child component.
 - Example: Imagine a blog application where you have a Post component. You pass the post details (title, author, content) as props to the Post component from a parent component.
     
