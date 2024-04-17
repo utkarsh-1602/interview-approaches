@@ -45,3 +45,4 @@ greet.call(person); // Output: Hello, my name is Jane
 ```
 
 refer: https://youtu.be/VkmUOktYDAU?list=PLKhlp2qtUcSaCVJEt4ogEFs6I41pNnMU5
+-
