@@ -18,4 +18,4 @@ db.movies.insertMany([
 
 let movies = db.movies.find();
 
-console.log(movies);
+console.log(movies)
