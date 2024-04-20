@@ -1,11 +1,14 @@
-let me = { 
-    name: "Ashutosh Verma", 
+let myObject = { 
+    name: "utkarsh hadgekar", 
+
     thisInArrow:() => { 
     console.log("My name is " + this.name); // no 'this' binding here 
     }, 
+
     thisInRegular(){ 
     console.log("My name is " + this.name); // 'this' binding works here 
     } 
    };
-   me.thisInArrow(); 
-   me.thisInRegular();
+
+myObject.thisInArrow(); 
+myObject.thisInRegular();
