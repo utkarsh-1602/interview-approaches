@@ -17,3 +17,4 @@ async function myFuun() {
 myFuun()
 
 // async function using error handling
+
