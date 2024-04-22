@@ -3,7 +3,7 @@ function fetchData2() {
         setTimeout(function () {
             console.log('Data fetched successfully');
             resolve();
-        }, 1000);
+        }, 2000);
     });
 }
 
