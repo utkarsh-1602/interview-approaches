@@ -1,6 +1,6 @@
 # Callback Function 
 - A function that is passed as an argument to another function so that it can be executed in that other function is called as a **callback function**.
-- Callback functions are commonly used in asynchronous programming to handle tasks that take time to complete, such as making API requests, reading files, or processing data/
+- Callback functions are commonly used in asynchronous programming to handle tasks that take time to complete, such as making API requests, reading files, or processing data.
 
 ## Can you illustrate how Callback Functions can create “callback hell” and how to avoid it?
 - Callback functions can lead to “callback hell” when they are nested within each other, creating a pyramid of doom. This happens because JavaScript executes code sequentially and relies on callbacks for asynchronous operations.
