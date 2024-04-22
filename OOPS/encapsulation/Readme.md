@@ -10,3 +10,4 @@ In JavaScript, encapsulation can be achieved using two techniques: using **closu
 
 - **Using Classes**: ES6 introduced the class syntax in JavaScript, which allows us to define classes and objects in a more structured way. Classes can be used to achieve encapsulation in JavaScript.
 
+Refer:[Difference Between Encapsulation and Abstraction](../abstraction/Readme.md#difference-between-abstraction-and-encapsulation)
