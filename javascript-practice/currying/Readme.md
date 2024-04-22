@@ -1,5 +1,5 @@
 # Currying in JavaScript
-- Currying is a functional programming technique in JavaScript where a function with multiple arguments is transformed into a sequence of nested functions, each taking a single argument. This allows you to partially apply arguments to a function, creating new functions with fewer arguments.
+- Currying is a functional programming technique in JavaScript where a function with multiple arguments is transformed into a sequence of nested functions, where each function takes only a single argument. This allows you to partially apply arguments to a function, creating new functions with fewer arguments.
 
     ### checkout examples:
      [Q1](Q1.js)
