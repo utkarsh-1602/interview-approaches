@@ -14,8 +14,7 @@
 `Promises` (and their `then` and `catch` callbacks) and certain DOM events like `MutationObserver` callbacks are examples of microtasks.
 Microtasks have higher priority than macrotasks and are executed before macrotasks in the event loop.
 
-- **Microtasks**, are smaller tasks that update the application state and should be executed before the browser continues with other assignments such as re-rendering the UI. Microtasks include promise callbacks and DOM mutation changes. Microtasks enable us to execute certain actions before the UI is re-rendered, thereby avoiding unnecessary UI rendering that might show an inconsistent application state
-
+- Microtasks are minor tasks that update the state of an application and should be completed before the browser moves on to other activities, such as re-rendering the user interface.
 
 ## Macro-tasks
 

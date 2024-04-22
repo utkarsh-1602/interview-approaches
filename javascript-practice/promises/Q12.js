@@ -17,7 +17,7 @@ function likeTheVideo(name){
     return new Promise((resolve, reject) => {
         
         setTimeout(() => {
-            reject(`Subscribe channel ${name}`)
+            reject(`You will find someone better`)
         }, 1000);
 
     })

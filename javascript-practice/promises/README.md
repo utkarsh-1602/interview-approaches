@@ -17,7 +17,7 @@ Promises can be in one of three states:
 
 
 ### Promise.all()
-- `Promise.all()`:  Takes an array of promises and returns a single promise that is resolved when all of the input promises have resolved, or rejected when one of the promise rejected.
+- `Promise.all()`:  Takes an array of promises and returns a all promises that are resolved, or returns the only one promise which has been rejected from all promises. 
 
 ```javascript
 Promise.all([promise1, promise2, promise3]).then((values) => {
@@ -61,7 +61,7 @@ The Promise.allSettled() method returns a promise that resolves after all of the
 
 
 ### Promise.any()
-Promise.any is a JavaScript method that was introduced in ECMAScript 2021 (ES12). It is used to handle a collection of promises, returning a single promise that resolves as soon as any of the promises in the iterable argument resolves, or rejects if all of the promises reject.
+Promise.any method returns all the resolved promise from all the (resolved or rejected) promises. and if all promises are rejected then it returns the errors of that promises. 
 
 - checkout example :
 [Q13](Q13.js)

@@ -6,7 +6,7 @@ function getUsername(username){
 
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            reject(username)
+            resolve(username)
         }, 2000)
     })
 
@@ -17,7 +17,7 @@ function likeTheVideo(name){
     return new Promise((resolve, reject) => {
         
         setTimeout(() => {
-            reject(`Subscribe channel ${name}`)
+            resolve(`Subscribe channel ${name}`)
         }, 1000);
 
     })
