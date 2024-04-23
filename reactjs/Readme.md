@@ -17,10 +17,6 @@ Refer: https://blog.webdevsimplified.com/2022-07/react-folder-structure/
 - React introduces JSX, which is a syntax extension that allows developers to write HTML-like code within JavaScript
 - React has a vast and active community, along with a rich ecosystem of tools, libraries, and frameworks that enhance development productivity and provide solutions for various needs, such as state management.
 
-### What is Reconciliation ? 
-- Reconciliation in React refers to the process by which React updates the DOM in response to changes in the component's state or props. When a component's state or props change, React needs to determine how to efficiently update the UI to reflect these changes. Reconciliation is the algorithm and mechanism that React uses to perform this task.
-- During the reconciliation process, React invokes various lifecycle hooks such as `componentDidUpdate()` to notify components of the changes. This allows components to perform additional logic or side effects after the DOM has been updated.
-
 ### What is React Fiber ?
 - React Fiber is a new reconciliation algorithm that helps React decide what changes to make to the virtual DOM.
 
@@ -95,6 +91,7 @@ The DOM (Document Object Model) is a programming interface for web documents. It
 ### What is Virtual DOM ?
 - It is JavaScript representation of the real DOM.
 - When changes are made to the data or state of a web application, React re-renders the components affected by those changes. Instead of directly manipulating the Real DOM for every change, React first updates the Virtual DOM.
+### Reconciliation
 - In React, when changes are made to the virtual DOM, React compares these changes to the previous version of the virtual DOM. This process is known as **reconciliation**. React's reconciliation algorithm efficiently determines what changes need to be made to the actual DOM in order to reflect the changes made in the virtual DOM.
 
 
