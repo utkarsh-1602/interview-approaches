@@ -13,3 +13,7 @@
 | Focus             | Bundling data and methods, controlling access     | Simplifying complexity, presenting clear view |
 | What is Hidden    | Internal state of object                           | Implementation details                        |
 | Level of Detail   | Internal class structure                          | Overall system design and interaction        |
+
+
+
+
